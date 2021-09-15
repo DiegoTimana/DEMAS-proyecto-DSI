@@ -38,7 +38,6 @@ public class VentanaInformes extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaInformes() {
-		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 504, 454);
 		contentPane = new JPanel();
