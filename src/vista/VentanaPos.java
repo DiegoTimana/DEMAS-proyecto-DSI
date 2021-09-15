@@ -32,6 +32,7 @@ public class VentanaPos extends JFrame {
 	private JTextField textField_10;
 	private JTextField textField_11;
 
+
 	/**
 	 * Create the frame.
 	 */
