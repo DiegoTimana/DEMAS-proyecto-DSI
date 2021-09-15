@@ -41,6 +41,7 @@ public class Principal {
 		ventanaUsuario.setVisible(true);
 		
 		// este comentario lo hizo luis f
+		// este comentario lo hizo diego
 		
 	}
 
