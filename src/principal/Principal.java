@@ -40,6 +40,8 @@ public class Principal {
 		VentanaGestionUsuarios ventanaUsuario = new VentanaGestionUsuarios();
 		ventanaUsuario.setVisible(true);
 		
+		// este comentario lo hizo luis f
+		
 	}
 
 }
