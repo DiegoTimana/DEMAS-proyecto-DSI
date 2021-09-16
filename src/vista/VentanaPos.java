@@ -39,7 +39,7 @@ public class VentanaPos extends JFrame {
 	 */
 	public VentanaPos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 640, 637);
+		setBounds(100, 100, 700, 681);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -48,91 +48,91 @@ public class VentanaPos extends JFrame {
 		JLabel lblTitulo = new JLabel("DEMAS");
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
-		lblTitulo.setBounds(0, 11, 624, 23);
+		lblTitulo.setBounds(0, 11, 676, 23);
 		contentPane.add(lblTitulo);
 		
 		JLabel lblTituloVentana = new JLabel("Terminal de Venta");
 		lblTituloVentana.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTituloVentana.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblTituloVentana.setBounds(10, 53, 624, 23);
+		lblTituloVentana.setBounds(10, 53, 666, 23);
 		contentPane.add(lblTituloVentana);
 		
 		textFieldNombre = new JTextField();
-		textFieldNombre.setBounds(66, 145, 321, 20);
+		textFieldNombre.setBounds(142, 144, 321, 20);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		textFieldApellido = new JTextField();
-		textFieldApellido.setBounds(66, 176, 321, 20);
+		textFieldApellido.setBounds(142, 175, 321, 20);
 		contentPane.add(textFieldApellido);
 		textFieldApellido.setColumns(10);
 		
 		textFieldId = new JTextField();
-		textFieldId.setBounds(66, 116, 321, 20);
+		textFieldId.setBounds(142, 115, 321, 20);
 		contentPane.add(textFieldId);
 		textFieldId.setColumns(10);
 		
 		textFieldDireccion = new JTextField();
-		textFieldDireccion.setBounds(66, 207, 321, 20);
+		textFieldDireccion.setBounds(142, 206, 321, 20);
 		contentPane.add(textFieldDireccion);
 		textFieldDireccion.setColumns(10);
 		
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setBounds(10, 148, 46, 14);
+		lblNombre.setBounds(10, 148, 60, 14);
 		contentPane.add(lblNombre);
 		
 		JLabel lblApellido = new JLabel("Apellido:");
-		lblApellido.setBounds(10, 179, 46, 14);
+		lblApellido.setBounds(10, 179, 60, 14);
 		contentPane.add(lblApellido);
 		
 		JLabel lblDireccion = new JLabel("Direcci\u00F3n:");
-		lblDireccion.setBounds(9, 210, 47, 14);
+		lblDireccion.setBounds(9, 210, 60, 14);
 		contentPane.add(lblDireccion);
 		
 		JLabel lblTelefono = new JLabel("Telefono:");
-		lblTelefono.setBounds(10, 243, 46, 14);
+		lblTelefono.setBounds(10, 243, 60, 14);
 		contentPane.add(lblTelefono);
 		
 		textFieldContenido = new JTextField();
-		textFieldContenido.setBounds(118, 382, 269, 20);
+		textFieldContenido.setBounds(172, 383, 269, 20);
 		contentPane.add(textFieldContenido);
 		textFieldContenido.setColumns(10);
 		
 		textFieldTelefono = new JTextField();
-		textFieldTelefono.setBounds(66, 238, 321, 20);
+		textFieldTelefono.setBounds(142, 237, 321, 20);
 		contentPane.add(textFieldTelefono);
 		textFieldTelefono.setColumns(10);
 		
 		textFieldPeso = new JTextField();
-		textFieldPeso.setBounds(118, 413, 269, 20);
+		textFieldPeso.setBounds(172, 414, 269, 20);
 		contentPane.add(textFieldPeso);
 		textFieldPeso.setColumns(10);
 		
 		textFieldSeguro = new JTextField();
-		textFieldSeguro.setBounds(118, 444, 269, 20);
+		textFieldSeguro.setBounds(172, 445, 269, 20);
 		contentPane.add(textFieldSeguro);
 		textFieldSeguro.setColumns(10);
 		
 		textFieldDireccionVenta = new JTextField();
-		textFieldDireccionVenta.setBounds(118, 351, 269, 20);
+		textFieldDireccionVenta.setBounds(172, 352, 269, 20);
 		contentPane.add(textFieldDireccionVenta);
 		textFieldDireccionVenta.setColumns(10);
 		
 		textFieldImpuesto = new JTextField();
-		textFieldImpuesto.setBounds(118, 475, 269, 20);
+		textFieldImpuesto.setBounds(172, 476, 269, 20);
 		contentPane.add(textFieldImpuesto);
 		textFieldImpuesto.setColumns(10);
 		
 		JLabel lblDireccionEntrega = new JLabel("Direcci\u00F3n Entrega:");
-		lblDireccionEntrega.setBounds(10, 354, 98, 14);
+		lblDireccionEntrega.setBounds(10, 354, 130, 14);
 		contentPane.add(lblDireccionEntrega);
 		
 		JLabel lblDireccionOrigen = new JLabel("Direcci\u00F3n Origen:");
-		lblDireccionOrigen.setBounds(10, 321, 98, 14);
+		lblDireccionOrigen.setBounds(10, 321, 130, 14);
 		contentPane.add(lblDireccionOrigen);
 		
 		JLabel lblContenido = new JLabel("Contenido:");
-		lblContenido.setBounds(10, 385, 98, 14);
+		lblContenido.setBounds(10, 385, 130, 14);
 		contentPane.add(lblContenido);
 		
 		JLabel lblInfoVenta = new JLabel("Informaci\u00F3n Venta");
@@ -141,15 +141,15 @@ public class VentanaPos extends JFrame {
 		contentPane.add(lblInfoVenta);
 		
 		JLabel lblPeso = new JLabel("Peso:");
-		lblPeso.setBounds(10, 416, 98, 14);
+		lblPeso.setBounds(10, 416, 130, 14);
 		contentPane.add(lblPeso);
 		
 		JLabel lblid = new JLabel("ID:");
-		lblid.setBounds(10, 119, 46, 14);
+		lblid.setBounds(10, 119, 60, 14);
 		contentPane.add(lblid);
 		
 		textFieldDireccionOrigen = new JTextField();
-		textFieldDireccionOrigen.setBounds(118, 320, 269, 20);
+		textFieldDireccionOrigen.setBounds(172, 321, 269, 20);
 		contentPane.add(textFieldDireccionOrigen);
 		textFieldDireccionOrigen.setColumns(10);
 		
@@ -159,45 +159,45 @@ public class VentanaPos extends JFrame {
 		contentPane.add(lblInfoCliente);
 		
 		JLabel lblSeguro = new JLabel("Seguro:");
-		lblSeguro.setBounds(10, 447, 98, 14);
+		lblSeguro.setBounds(10, 447, 130, 14);
 		contentPane.add(lblSeguro);
 		
 		JLabel lblImpuesto = new JLabel("Impuestos de Envio:");
-		lblImpuesto.setBounds(10, 478, 98, 14);
+		lblImpuesto.setBounds(10, 478, 130, 14);
 		contentPane.add(lblImpuesto);
 		
 		JLabel lblTotalVenta = new JLabel("Total Venta:");
-		lblTotalVenta.setBounds(10, 509, 98, 14);
+		lblTotalVenta.setBounds(10, 509, 130, 14);
 		contentPane.add(lblTotalVenta);
 		
 		textFieldTotalVenta = new JTextField();
-		textFieldTotalVenta.setBounds(118, 506, 269, 20);
+		textFieldTotalVenta.setBounds(172, 507, 269, 20);
 		contentPane.add(textFieldTotalVenta);
 		textFieldTotalVenta.setColumns(10);
 		
 		JLabel lblFormaPago = new JLabel("Forma de Pago");
 		lblFormaPago.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblFormaPago.setBounds(421, 321, 133, 23);
+		lblFormaPago.setBounds(489, 319, 133, 23);
 		contentPane.add(lblFormaPago);
 		
 		JRadioButton rdbtnEfectivo = new JRadioButton("Efectivo");
-		rdbtnEfectivo.setBounds(420, 350, 70, 23);
+		rdbtnEfectivo.setBounds(488, 348, 80, 23);
 		contentPane.add(rdbtnEfectivo);
 		
 		JRadioButton rdbtnTarjeta = new JRadioButton("Tarjeta");
-		rdbtnTarjeta.setBounds(421, 381, 70, 23);
+		rdbtnTarjeta.setBounds(489, 379, 70, 23);
 		contentPane.add(rdbtnTarjeta);
 		
 		JButton btnValidarPago = new JButton("Validar Pago");
-		btnValidarPago.setBounds(497, 381, 98, 23);
+		btnValidarPago.setBounds(565, 379, 110, 23);
 		contentPane.add(btnValidarPago);
 		
 		JButton btnRegistrarVenta = new JButton("Registrar Venta");
-		btnRegistrarVenta.setBounds(421, 474, 174, 23);
+		btnRegistrarVenta.setBounds(489, 472, 174, 23);
 		contentPane.add(btnRegistrarVenta);
 		
 		JButton btnBuscar = new JButton("Buscar");
-		btnBuscar.setBounds(421, 115, 119, 23);
+		btnBuscar.setBounds(533, 116, 130, 23);
 		contentPane.add(btnBuscar);
 		
 		JButton btnAdicionarCliente = new JButton("Adicionar Cliente");
@@ -205,7 +205,7 @@ public class VentanaPos extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnAdicionarCliente.setBounds(421, 144, 119, 23);
+		btnAdicionarCliente.setBounds(533, 145, 130, 23);
 		contentPane.add(btnAdicionarCliente);
 		
 		JButton btnActualizar = new JButton("Actualizar");
@@ -213,11 +213,11 @@ public class VentanaPos extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnActualizar.setBounds(421, 175, 119, 23);
+		btnActualizar.setBounds(533, 176, 130, 23);
 		contentPane.add(btnActualizar);
 		
 		JButton btnGenerarRecibo = new JButton("Generar Recibo");
-		btnGenerarRecibo.setBounds(421, 505, 174, 23);
+		btnGenerarRecibo.setBounds(489, 503, 174, 23);
 		contentPane.add(btnGenerarRecibo);
 		
 		JButton btnVolverAtras = new JButton("Volver Atr\u00E1s");
@@ -229,7 +229,7 @@ public class VentanaPos extends JFrame {
 				ventana.setLocationRelativeTo(null);
 			}
 		});
-		btnVolverAtras.setBounds(272, 554, 115, 23);
+		btnVolverAtras.setBounds(326, 591, 115, 23);
 		contentPane.add(btnVolverAtras);
 	}
 }

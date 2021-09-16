@@ -95,7 +95,17 @@ public class VentanaPerfil extends JFrame {
 		passwordField.setBounds(130, 191, 194, 20);
 		contentPane.add(passwordField);
 		
+		
+		//Boton de actualizar->cambio de coontraseña
 		JButton btnNewButton = new JButton("Actualizar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaCambioPass ventanacambio = new VentanaCambioPass();
+				ventanacambio.setVisible(true);
+				ventanacambio.setLocationRelativeTo(null);
+				setVisible(false);			
+			}
+		});
 		btnNewButton.setBounds(368, 191, 113, 23);
 		contentPane.add(btnNewButton);
 		
