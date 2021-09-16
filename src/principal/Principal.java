@@ -35,8 +35,10 @@ public class Principal {
         ventanaSede.setVisible(true);
         */
 		
-		VentanaGestionUsuarios ventanaUsuario = new VentanaGestionUsuarios();
-		ventanaUsuario.setVisible(true);
+		VentanaLogin ventanaLogin1 = new VentanaLogin();
+		ventanaLogin1.setVisible(true);
+		ventanaLogin1.setLocationRelativeTo(null);
+		
 		
 		// este comentario lo hizo luis f
 		// este comentario lo hizo diego

@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -15,6 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VentanaLogin extends JFrame {
 
@@ -22,24 +25,8 @@ public class VentanaLogin extends JFrame {
 	public JPasswordField passwordField;
 	public JTextField textFieldUsuario;
 	public JButton btnIngresar;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaLogin frame = new VentanaLogin();
-					frame.setVisible(true);
-					frame.setLocationRelativeTo(null);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	final VentanaGerente windowgerente = new VentanaGerente();
+	
 	/**
 	 * Create the frame.
 	 */
@@ -88,7 +75,25 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(textFieldUsuario);
 		textFieldUsuario.setColumns(10);
 		
+		//variables de prueba para el password y el usuario
+		String password = "admin";
+		String user= "admin";
+		
 		btnIngresar = new JButton("Ingresar");
+		btnIngresar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(password==user) {
+					JOptionPane.showMessageDialog(null,"Bienvenido al Sistema DEMAS");
+					windowgerente.setVisible(true);
+					windowgerente.setLocationRelativeTo(null);
+					dispose();
+				}
+				else {
+					JOptionPane.showMessageDialog(null,"Usuario o contraseña incorrectos");
+				}
+			}
+		});
 		btnIngresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
