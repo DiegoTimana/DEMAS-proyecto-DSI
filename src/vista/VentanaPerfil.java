@@ -18,10 +18,10 @@ import java.awt.event.ActionEvent;
 public class VentanaPerfil extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField textFieldNombre;
+	private JTextField textFieldCedula;
+	private JTextField textFieldCargo;
+	private JTextField textFieldSede;
 	private JPasswordField passwordField;
 
 
@@ -36,57 +36,57 @@ public class VentanaPerfil extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("DEMAS");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel.setBounds(10, 11, 414, 26);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("DEMAS");
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblTitulo.setBounds(10, 11, 414, 26);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Sede:");
-		lblNewLabel_1.setBounds(10, 166, 46, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblSede = new JLabel("Sede:");
+		lblSede.setBounds(10, 166, 46, 14);
+		contentPane.add(lblSede);
 		
-		JLabel lblNewLabel_2 = new JLabel("Cargo:");
-		lblNewLabel_2.setBounds(10, 141, 46, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblCargo = new JLabel("Cargo:");
+		lblCargo.setBounds(10, 141, 46, 14);
+		contentPane.add(lblCargo);
 		
-		JLabel lblNewLabel_3 = new JLabel("Cedula:");
-		lblNewLabel_3.setBounds(10, 116, 46, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblCedula = new JLabel("Cedula:");
+		lblCedula.setBounds(10, 116, 46, 14);
+		contentPane.add(lblCedula);
 		
-		JLabel lblNewLabel_4 = new JLabel("Perfil");
-		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_4.setBounds(10, 48, 414, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblTituloVentana = new JLabel("Perfil");
+		lblTituloVentana.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTituloVentana.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblTituloVentana.setBounds(10, 48, 414, 14);
+		contentPane.add(lblTituloVentana);
 		
-		JLabel lblNewLabel_5 = new JLabel("Nombre:");
-		lblNewLabel_5.setBounds(10, 91, 46, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(10, 91, 46, 14);
+		contentPane.add(lblNombre);
 		
-		JLabel lblNewLabel_6 = new JLabel("Password:");
-		lblNewLabel_6.setBounds(10, 191, 56, 14);
-		contentPane.add(lblNewLabel_6);
+		JLabel lblPassword = new JLabel("Password:");
+		lblPassword.setBounds(10, 191, 56, 14);
+		contentPane.add(lblPassword);
 		
-		textField = new JTextField();
-		textField.setBounds(76, 88, 194, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textFieldNombre = new JTextField();
+		textFieldNombre.setBounds(76, 88, 194, 20);
+		contentPane.add(textFieldNombre);
+		textFieldNombre.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(76, 113, 194, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		textFieldCedula = new JTextField();
+		textFieldCedula.setBounds(76, 113, 194, 20);
+		contentPane.add(textFieldCedula);
+		textFieldCedula.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(76, 138, 194, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		textFieldCargo = new JTextField();
+		textFieldCargo.setBounds(76, 138, 194, 20);
+		contentPane.add(textFieldCargo);
+		textFieldCargo.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(76, 163, 194, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		textFieldSede = new JTextField();
+		textFieldSede.setBounds(76, 163, 194, 20);
+		contentPane.add(textFieldSede);
+		textFieldSede.setColumns(10);
 		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(76, 188, 194, 20);

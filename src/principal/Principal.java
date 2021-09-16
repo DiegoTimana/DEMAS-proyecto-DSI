@@ -1,8 +1,6 @@
 package principal;
 
 
-
-
 import controlador.ControladorLogin;
 import controlador.ControladorSedes;
 import modelo.Conexion;

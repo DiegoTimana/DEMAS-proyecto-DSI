@@ -19,18 +19,18 @@ import java.awt.event.ActionEvent;
 public class VentanaPos extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
+	private JTextField textFieldNombre;
+	private JTextField textFieldApellido;
+	private JTextField textFieldId;
+	private JTextField textFieldDireccion;
+	private JTextField textFieldContenido;
+	private JTextField textFieldTelefono;
+	private JTextField textFieldPeso;
+	private JTextField textFieldSeguro;
+	private JTextField textFieldDireccionVenta;
+	private JTextField textFieldImpuesto;
+	private JTextField textFieldDireccionOrigen;
+	private JTextField textFieldTotalVenta;
 
 
 	/**
@@ -44,179 +44,179 @@ public class VentanaPos extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("DEMAS");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 26));
-		lblNewLabel.setBounds(0, 11, 624, 23);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("DEMAS");
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
+		lblTitulo.setBounds(0, 11, 624, 23);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Terminal de Venta");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(10, 53, 624, 23);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblTituloVentana = new JLabel("Terminal de Venta");
+		lblTituloVentana.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTituloVentana.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblTituloVentana.setBounds(10, 53, 624, 23);
+		contentPane.add(lblTituloVentana);
 		
-		textField = new JTextField();
-		textField.setBounds(66, 145, 321, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textFieldNombre = new JTextField();
+		textFieldNombre.setBounds(66, 145, 321, 20);
+		contentPane.add(textFieldNombre);
+		textFieldNombre.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(66, 176, 321, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		textFieldApellido = new JTextField();
+		textFieldApellido.setBounds(66, 176, 321, 20);
+		contentPane.add(textFieldApellido);
+		textFieldApellido.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(66, 116, 321, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		textFieldId = new JTextField();
+		textFieldId.setBounds(66, 116, 321, 20);
+		contentPane.add(textFieldId);
+		textFieldId.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(66, 207, 321, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		textFieldDireccion = new JTextField();
+		textFieldDireccion.setBounds(66, 207, 321, 20);
+		contentPane.add(textFieldDireccion);
+		textFieldDireccion.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Nombre:");
-		lblNewLabel_2.setBounds(10, 148, 46, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(10, 148, 46, 14);
+		contentPane.add(lblNombre);
 		
-		JLabel lblNewLabel_3 = new JLabel("Apellido:");
-		lblNewLabel_3.setBounds(10, 179, 46, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblApellido = new JLabel("Apellido:");
+		lblApellido.setBounds(10, 179, 46, 14);
+		contentPane.add(lblApellido);
 		
-		JLabel lblNewLabel_4 = new JLabel("Direcci\u00F3n:");
-		lblNewLabel_4.setBounds(9, 210, 47, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblDireccion = new JLabel("Direcci\u00F3n:");
+		lblDireccion.setBounds(9, 210, 47, 14);
+		contentPane.add(lblDireccion);
 		
-		JLabel lblNewLabel_5 = new JLabel("Telefono:");
-		lblNewLabel_5.setBounds(10, 243, 46, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblTelefono = new JLabel("Telefono:");
+		lblTelefono.setBounds(10, 243, 46, 14);
+		contentPane.add(lblTelefono);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(118, 382, 269, 20);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		textFieldContenido = new JTextField();
+		textFieldContenido.setBounds(118, 382, 269, 20);
+		contentPane.add(textFieldContenido);
+		textFieldContenido.setColumns(10);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(66, 238, 321, 20);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
+		textFieldTelefono = new JTextField();
+		textFieldTelefono.setBounds(66, 238, 321, 20);
+		contentPane.add(textFieldTelefono);
+		textFieldTelefono.setColumns(10);
 		
-		textField_6 = new JTextField();
-		textField_6.setBounds(118, 413, 269, 20);
-		contentPane.add(textField_6);
-		textField_6.setColumns(10);
+		textFieldPeso = new JTextField();
+		textFieldPeso.setBounds(118, 413, 269, 20);
+		contentPane.add(textFieldPeso);
+		textFieldPeso.setColumns(10);
 		
-		textField_7 = new JTextField();
-		textField_7.setBounds(118, 444, 269, 20);
-		contentPane.add(textField_7);
-		textField_7.setColumns(10);
+		textFieldSeguro = new JTextField();
+		textFieldSeguro.setBounds(118, 444, 269, 20);
+		contentPane.add(textFieldSeguro);
+		textFieldSeguro.setColumns(10);
 		
-		textField_8 = new JTextField();
-		textField_8.setBounds(118, 351, 269, 20);
-		contentPane.add(textField_8);
-		textField_8.setColumns(10);
+		textFieldDireccionVenta = new JTextField();
+		textFieldDireccionVenta.setBounds(118, 351, 269, 20);
+		contentPane.add(textFieldDireccionVenta);
+		textFieldDireccionVenta.setColumns(10);
 		
-		textField_9 = new JTextField();
-		textField_9.setBounds(118, 475, 269, 20);
-		contentPane.add(textField_9);
-		textField_9.setColumns(10);
+		textFieldImpuesto = new JTextField();
+		textFieldImpuesto.setBounds(118, 475, 269, 20);
+		contentPane.add(textFieldImpuesto);
+		textFieldImpuesto.setColumns(10);
 		
-		JLabel lblNewLabel_6 = new JLabel("Direcci\u00F3n Entrega:");
-		lblNewLabel_6.setBounds(10, 354, 98, 14);
-		contentPane.add(lblNewLabel_6);
+		JLabel lblDireccionEntrega = new JLabel("Direcci\u00F3n Entrega:");
+		lblDireccionEntrega.setBounds(10, 354, 98, 14);
+		contentPane.add(lblDireccionEntrega);
 		
-		JLabel lblNewLabel_7 = new JLabel("Direcci\u00F3n Origen:");
-		lblNewLabel_7.setBounds(10, 321, 98, 14);
-		contentPane.add(lblNewLabel_7);
+		JLabel lblDireccionOrigen = new JLabel("Direcci\u00F3n Origen:");
+		lblDireccionOrigen.setBounds(10, 321, 98, 14);
+		contentPane.add(lblDireccionOrigen);
 		
-		JLabel lblNewLabel_8 = new JLabel("Contenido:");
-		lblNewLabel_8.setBounds(10, 385, 98, 14);
-		contentPane.add(lblNewLabel_8);
+		JLabel lblContenido = new JLabel("Contenido:");
+		lblContenido.setBounds(10, 385, 98, 14);
+		contentPane.add(lblContenido);
 		
-		JLabel lblNewLabel_9 = new JLabel("Informaci\u00F3n Venta");
-		lblNewLabel_9.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel_9.setBounds(10, 287, 614, 23);
-		contentPane.add(lblNewLabel_9);
+		JLabel lblInfoVenta = new JLabel("Informaci\u00F3n Venta");
+		lblInfoVenta.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblInfoVenta.setBounds(10, 287, 614, 23);
+		contentPane.add(lblInfoVenta);
 		
-		JLabel lblNewLabel_10 = new JLabel("Peso:");
-		lblNewLabel_10.setBounds(10, 416, 98, 14);
-		contentPane.add(lblNewLabel_10);
+		JLabel lblPeso = new JLabel("Peso:");
+		lblPeso.setBounds(10, 416, 98, 14);
+		contentPane.add(lblPeso);
 		
-		JLabel lblNewLabel_11 = new JLabel("ID:");
-		lblNewLabel_11.setBounds(10, 119, 46, 14);
-		contentPane.add(lblNewLabel_11);
+		JLabel lblid = new JLabel("ID:");
+		lblid.setBounds(10, 119, 46, 14);
+		contentPane.add(lblid);
 		
-		textField_10 = new JTextField();
-		textField_10.setBounds(118, 320, 269, 20);
-		contentPane.add(textField_10);
-		textField_10.setColumns(10);
+		textFieldDireccionOrigen = new JTextField();
+		textFieldDireccionOrigen.setBounds(118, 320, 269, 20);
+		contentPane.add(textFieldDireccionOrigen);
+		textFieldDireccionOrigen.setColumns(10);
 		
-		JLabel lblNewLabel_12 = new JLabel("Informaci\u00F3n Cliente");
-		lblNewLabel_12.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel_12.setBounds(10, 87, 614, 18);
-		contentPane.add(lblNewLabel_12);
+		JLabel lblInfoCliente = new JLabel("Informaci\u00F3n Cliente");
+		lblInfoCliente.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblInfoCliente.setBounds(10, 87, 614, 18);
+		contentPane.add(lblInfoCliente);
 		
-		JLabel lblNewLabel_13 = new JLabel("Seguro:");
-		lblNewLabel_13.setBounds(10, 447, 98, 14);
-		contentPane.add(lblNewLabel_13);
+		JLabel lblSeguro = new JLabel("Seguro:");
+		lblSeguro.setBounds(10, 447, 98, 14);
+		contentPane.add(lblSeguro);
 		
-		JLabel lblNewLabel_14 = new JLabel("Impuestos de Envio:");
-		lblNewLabel_14.setBounds(10, 478, 98, 14);
-		contentPane.add(lblNewLabel_14);
+		JLabel lblImpuesto = new JLabel("Impuestos de Envio:");
+		lblImpuesto.setBounds(10, 478, 98, 14);
+		contentPane.add(lblImpuesto);
 		
-		JLabel lblNewLabel_15 = new JLabel("Total Venta:");
-		lblNewLabel_15.setBounds(10, 509, 98, 14);
-		contentPane.add(lblNewLabel_15);
+		JLabel lblTotalVenta = new JLabel("Total Venta:");
+		lblTotalVenta.setBounds(10, 509, 98, 14);
+		contentPane.add(lblTotalVenta);
 		
-		textField_11 = new JTextField();
-		textField_11.setBounds(118, 506, 269, 20);
-		contentPane.add(textField_11);
-		textField_11.setColumns(10);
+		textFieldTotalVenta = new JTextField();
+		textFieldTotalVenta.setBounds(118, 506, 269, 20);
+		contentPane.add(textFieldTotalVenta);
+		textFieldTotalVenta.setColumns(10);
 		
-		JLabel lblNewLabel_16 = new JLabel("Forma de Pago");
-		lblNewLabel_16.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel_16.setBounds(421, 321, 133, 23);
-		contentPane.add(lblNewLabel_16);
+		JLabel lblFormaPago = new JLabel("Forma de Pago");
+		lblFormaPago.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblFormaPago.setBounds(421, 321, 133, 23);
+		contentPane.add(lblFormaPago);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Efectivo");
-		rdbtnNewRadioButton.setBounds(420, 350, 70, 23);
-		contentPane.add(rdbtnNewRadioButton);
+		JRadioButton rdbtnEfectivo = new JRadioButton("Efectivo");
+		rdbtnEfectivo.setBounds(420, 350, 70, 23);
+		contentPane.add(rdbtnEfectivo);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Tarjeta");
-		rdbtnNewRadioButton_1.setBounds(421, 381, 70, 23);
-		contentPane.add(rdbtnNewRadioButton_1);
+		JRadioButton rdbtnTarjeta = new JRadioButton("Tarjeta");
+		rdbtnTarjeta.setBounds(421, 381, 70, 23);
+		contentPane.add(rdbtnTarjeta);
 		
-		JButton btnNewButton = new JButton("Validar Pago");
-		btnNewButton.setBounds(497, 381, 98, 23);
-		contentPane.add(btnNewButton);
+		JButton btnValidarPago = new JButton("Validar Pago");
+		btnValidarPago.setBounds(497, 381, 98, 23);
+		contentPane.add(btnValidarPago);
 		
-		JButton btnNewButton_1 = new JButton("Registrar Venta");
-		btnNewButton_1.setBounds(421, 474, 174, 23);
-		contentPane.add(btnNewButton_1);
+		JButton btnRegistrarVenta = new JButton("Registrar Venta");
+		btnRegistrarVenta.setBounds(421, 474, 174, 23);
+		contentPane.add(btnRegistrarVenta);
 		
-		JButton btnNewButton_2 = new JButton("Buscar");
-		btnNewButton_2.setBounds(421, 115, 119, 23);
-		contentPane.add(btnNewButton_2);
+		JButton btnBuscar = new JButton("Buscar");
+		btnBuscar.setBounds(421, 115, 119, 23);
+		contentPane.add(btnBuscar);
 		
-		JButton btnNewButton_3 = new JButton("Adicionar Cliente");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton btnAdicionarCliente = new JButton("Adicionar Cliente");
+		btnAdicionarCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton_3.setBounds(421, 144, 119, 23);
-		contentPane.add(btnNewButton_3);
+		btnAdicionarCliente.setBounds(421, 144, 119, 23);
+		contentPane.add(btnAdicionarCliente);
 		
-		JButton btnNewButton_4 = new JButton("Actualizar");
-		btnNewButton_4.addActionListener(new ActionListener() {
+		JButton btnActualizar = new JButton("Actualizar");
+		btnActualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton_4.setBounds(421, 175, 119, 23);
-		contentPane.add(btnNewButton_4);
+		btnActualizar.setBounds(421, 175, 119, 23);
+		contentPane.add(btnActualizar);
 		
-		JButton btnNewButton_5 = new JButton("Generar Recibo");
-		btnNewButton_5.setBounds(421, 505, 174, 23);
-		contentPane.add(btnNewButton_5);
+		JButton btnGenerarRecibo = new JButton("Generar Recibo");
+		btnGenerarRecibo.setBounds(421, 505, 174, 23);
+		contentPane.add(btnGenerarRecibo);
 	}
 }

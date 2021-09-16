@@ -31,36 +31,36 @@ public class VentanaGerente extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("DEMAS");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 26));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(0, 11, 434, 32);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("DEMAS");
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setBounds(0, 11, 434, 32);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenPerfil.png")));
-		lblNewLabel_1.setBounds(41, 54, 64, 64);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblimgperfil = new JLabel("");
+		lblimgperfil.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenPerfil.png")));
+		lblimgperfil.setBounds(41, 54, 64, 64);
+		contentPane.add(lblimgperfil);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("");
-		lblNewLabel_1_1.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenSedes.png")));
-		lblNewLabel_1_1.setBounds(41, 148, 64, 64);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblimgestionsedes = new JLabel("");
+		lblimgestionsedes.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenSedes.png")));
+		lblimgestionsedes.setBounds(41, 148, 64, 64);
+		contentPane.add(lblimgestionsedes);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("");
-		lblNewLabel_1_1_1.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenGestionUsuarios.png")));
-		lblNewLabel_1_1_1.setBounds(41, 242, 64, 64);
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel lblimggestionusu = new JLabel("");
+		lblimggestionusu.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenGestionUsuarios.png")));
+		lblimggestionusu.setBounds(41, 242, 64, 64);
+		contentPane.add(lblimggestionusu);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("");
-		lblNewLabel_1_2.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenVentas.png")));
-		lblNewLabel_1_2.setBounds(41, 336, 64, 64);
-		contentPane.add(lblNewLabel_1_2);
+		JLabel lblimgpos = new JLabel("");
+		lblimgpos.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenVentas.png")));
+		lblimgpos.setBounds(41, 336, 64, 64);
+		contentPane.add(lblimgpos);
 		
-		JLabel lblNewLabel_1_3 = new JLabel("");
-		lblNewLabel_1_3.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenReportes.png")));
-		lblNewLabel_1_3.setBounds(41, 430, 64, 64);
-		contentPane.add(lblNewLabel_1_3);
+		JLabel lblimginformes = new JLabel("");
+		lblimginformes.setIcon(new ImageIcon(VentanaGerente.class.getResource("/imagenes/imagenReportes.png")));
+		lblimginformes.setBounds(41, 430, 64, 64);
+		contentPane.add(lblimginformes);
 		
 		JButton btnPerfil = new JButton("Perfil");
 		btnPerfil.setBounds(136, 54, 128, 64);

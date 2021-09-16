@@ -17,9 +17,9 @@ import javax.swing.JButton;
 public class VentanaValidacionTarjeta extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_3;
+	private JTextField textFieldNombre;
+	private JTextField textFieldNumTrajeta;
+	private JTextField textFieldCvv;
 
 	/**
 	 * Create the frame.
@@ -32,24 +32,24 @@ public class VentanaValidacionTarjeta extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Validaci\u00F3n de Tarjeta");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel.setBounds(0, 11, 434, 25);
-		contentPane.add(lblNewLabel);
+		JLabel lblValidacionTarjeta = new JLabel("Validaci\u00F3n de Tarjeta");
+		lblValidacionTarjeta.setHorizontalAlignment(SwingConstants.CENTER);
+		lblValidacionTarjeta.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblValidacionTarjeta.setBounds(0, 11, 434, 25);
+		contentPane.add(lblValidacionTarjeta);
 		
-		JLabel lblNewLabel_1 = new JLabel("Tipo de Tarjeta:");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1.setBounds(10, 47, 125, 25);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblTipotarjeta = new JLabel("Tipo de Tarjeta:");
+		lblTipotarjeta.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblTipotarjeta.setBounds(10, 47, 125, 25);
+		contentPane.add(lblTipotarjeta);
 		
-		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Debito");
-		rdbtnNewRadioButton_3.setBounds(86, 122, 64, 23);
-		contentPane.add(rdbtnNewRadioButton_3);
+		JRadioButton rdbtnDebito = new JRadioButton("Debito");
+		rdbtnDebito.setBounds(86, 122, 64, 23);
+		contentPane.add(rdbtnDebito);
 		
-		JRadioButton rdbtnNewRadioButton_4 = new JRadioButton("Credito");
-		rdbtnNewRadioButton_4.setBounds(10, 122, 70, 23);
-		contentPane.add(rdbtnNewRadioButton_4);
+		JRadioButton rdbtnCredito = new JRadioButton("Credito");
+		rdbtnCredito.setBounds(10, 122, 70, 23);
+		contentPane.add(rdbtnCredito);
 		
 		JLabel lblNewLabel_2 = new JLabel("Nombre");
 		lblNewLabel_2.setBounds(10, 192, 113, 20);
@@ -59,53 +59,53 @@ public class VentanaValidacionTarjeta extends JFrame {
 		lblNewLabel_3.setBounds(10, 223, 113, 20);
 		contentPane.add(lblNewLabel_3);
 		
-		textField = new JTextField();
-		textField.setBounds(133, 192, 224, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textFieldNombre = new JTextField();
+		textFieldNombre.setBounds(133, 192, 224, 20);
+		contentPane.add(textFieldNombre);
+		textFieldNombre.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(133, 223, 224, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		textFieldNumTrajeta = new JTextField();
+		textFieldNumTrajeta.setBounds(133, 223, 224, 20);
+		contentPane.add(textFieldNumTrajeta);
+		textFieldNumTrajeta.setColumns(10);
 		
-		JLabel lblNewLabel_4 = new JLabel("Fecha de Vencimiento");
-		lblNewLabel_4.setBounds(10, 261, 113, 20);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblVencimientoTarjeta = new JLabel("Fecha de Vencimiento");
+		lblVencimientoTarjeta.setBounds(10, 261, 113, 20);
+		contentPane.add(lblVencimientoTarjeta);
 		
-		JLabel lblNewLabel_5 = new JLabel("CVV");
-		lblNewLabel_5.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_5.setBounds(10, 297, 113, 20);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblCvv = new JLabel("CVV");
+		lblCvv.setHorizontalAlignment(SwingConstants.LEFT);
+		lblCvv.setBounds(10, 297, 113, 20);
+		contentPane.add(lblCvv);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(133, 297, 224, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		textFieldCvv = new JTextField();
+		textFieldCvv.setBounds(133, 297, 224, 20);
+		contentPane.add(textFieldCvv);
+		textFieldCvv.setColumns(10);
 		
-		JLabel lblNewLabel_6 = new JLabel("Informaci\u00F3n del Titular");
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_6.setBounds(10, 162, 414, 25);
-		contentPane.add(lblNewLabel_6);
+		JLabel lblInfoTitular = new JLabel("Informaci\u00F3n del Titular");
+		lblInfoTitular.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblInfoTitular.setBounds(10, 162, 414, 25);
+		contentPane.add(lblInfoTitular);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(10, 83, 140, 22);
-		contentPane.add(comboBox);
+		JComboBox comboBoxTipoTarjea = new JComboBox();
+		comboBoxTipoTarjea.setBounds(10, 83, 140, 22);
+		contentPane.add(comboBoxTipoTarjea);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(133, 261, 101, 20);
-		contentPane.add(comboBox_1);
+		JComboBox comboBoxAnio = new JComboBox();
+		comboBoxAnio.setBounds(133, 261, 101, 20);
+		contentPane.add(comboBoxAnio);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBounds(255, 261, 70, 20);
-		contentPane.add(comboBox_2);
+		JComboBox comboBoxMes = new JComboBox();
+		comboBoxMes.setBounds(255, 261, 70, 20);
+		contentPane.add(comboBoxMes);
 		
-		JButton btnNewButton = new JButton("Aceptar");
-		btnNewButton.setBounds(133, 353, 89, 23);
-		contentPane.add(btnNewButton);
+		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar.setBounds(133, 353, 89, 23);
+		contentPane.add(btnAceptar);
 		
-		JButton btnNewButton_1 = new JButton("Cancelar");
-		btnNewButton_1.setBounds(268, 353, 89, 23);
-		contentPane.add(btnNewButton_1);
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setBounds(268, 353, 89, 23);
+		contentPane.add(btnCancelar);
 	}
 }

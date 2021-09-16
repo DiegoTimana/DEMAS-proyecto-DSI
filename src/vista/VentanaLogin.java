@@ -69,15 +69,15 @@ public class VentanaLogin extends JFrame {
 		imagen1.setBounds(0, 89, 434, 128);
 		contentPane.add(imagen1);
 		
-		JLabel lblNewLabel_3 = new JLabel("Usuario:");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_3.setBounds(41, 249, 72, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblUsuario = new JLabel("Usuario:");
+		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblUsuario.setBounds(41, 249, 72, 14);
+		contentPane.add(lblUsuario);
 		
-		JLabel lblNewLabel_4 = new JLabel("Password:");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_4.setBounds(41, 289, 72, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblPassword = new JLabel("Password:");
+		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblPassword.setBounds(41, 289, 72, 14);
+		contentPane.add(lblPassword);
 		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(123, 288, 203, 20);

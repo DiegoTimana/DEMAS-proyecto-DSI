@@ -45,49 +45,49 @@ public class VentanaInformes extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("DEMAS");
-		lblNewLabel.setBounds(5, 5, 485, 32);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 26));
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("DEMAS");
+		lblTitulo.setBounds(5, 5, 485, 32);
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Por favor seleccione el tipo de informe que desea:");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1.setBounds(15, 47, 370, 32);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblDescripcion = new JLabel("Por favor seleccione el tipo de informe que desea:");
+		lblDescripcion.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblDescripcion.setBounds(15, 47, 370, 32);
+		contentPane.add(lblDescripcion);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Gr\u00E1fico circular");
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1.setBounds(15, 102, 101, 32);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblGrCircular = new JLabel("Gr\u00E1fico circular");
+		lblGrCircular.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblGrCircular.setBounds(15, 102, 101, 32);
+		contentPane.add(lblGrCircular);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Gr\u00E1fico de barras");
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1_1.setBounds(15, 190, 116, 32);
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel lblGrBarras = new JLabel("Gr\u00E1fico de barras");
+		lblGrBarras.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblGrBarras.setBounds(15, 190, 116, 32);
+		contentPane.add(lblGrBarras);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/torta.png")));
-		btnNewButton.setBounds(230, 102, 109, 46);
-		contentPane.add(btnNewButton);
+		JButton btnGrCircular = new JButton("");
+		btnGrCircular.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/torta.png")));
+		btnGrCircular.setBounds(230, 102, 109, 46);
+		contentPane.add(btnGrCircular);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/report.png")));
-		btnNewButton_1.setBounds(230, 190, 109, 46);
-		contentPane.add(btnNewButton_1);
+		JButton btnGrBarras = new JButton("");
+		btnGrBarras.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/report.png")));
+		btnGrBarras.setBounds(230, 190, 109, 46);
+		contentPane.add(btnGrBarras);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Reporte en excel");
-		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1_1_1_1.setBounds(15, 278, 116, 32);
-		contentPane.add(lblNewLabel_1_1_1_1);
+		JLabel lblExcel = new JLabel("Reporte en excel");
+		lblExcel.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblExcel.setBounds(15, 278, 116, 32);
+		contentPane.add(lblExcel);
 		
-		JButton btnNewButton_1_1 = new JButton("");
-		btnNewButton_1_1.addActionListener(new ActionListener() {
+		JButton btnGrExcel = new JButton("");
+		btnGrExcel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton_1_1.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/excel.png")));
-		btnNewButton_1_1.setBounds(230, 278, 109, 46);
-		contentPane.add(btnNewButton_1_1);
+		btnGrExcel.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/excel.png")));
+		btnGrExcel.setBounds(230, 278, 109, 46);
+		contentPane.add(btnGrExcel);
 	}
 }

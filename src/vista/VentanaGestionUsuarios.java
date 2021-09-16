@@ -52,70 +52,70 @@ public class VentanaGestionUsuarios extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("DEMAS");
-		lblNewLabel.setBackground(Color.LIGHT_GRAY);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 26));
-		lblNewLabel.setBounds(0, 11, 544, 32);
-		contentPane.add(lblNewLabel);
+		JLabel lbltitulo = new JLabel("DEMAS");
+		lbltitulo.setBackground(Color.LIGHT_GRAY);
+		lbltitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lbltitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
+		lbltitulo.setBounds(0, 11, 544, 32);
+		contentPane.add(lbltitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Gestion de Usuarios");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(0, 54, 544, 25);
-		contentPane.add(lblNewLabel_1);
+		JLabel lbltituloventana = new JLabel("Gestion de Usuarios");
+		lbltituloventana.setHorizontalAlignment(SwingConstants.CENTER);
+		lbltituloventana.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbltituloventana.setBounds(0, 54, 544, 25);
+		contentPane.add(lbltituloventana);
 		
-		JLabel lblNewLabel_2 = new JLabel("ID:");
-		lblNewLabel_2.setBounds(41, 100, 108, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblid = new JLabel("ID:");
+		lblid.setBounds(41, 100, 108, 14);
+		contentPane.add(lblid);
 		
-		JLabel lblNewLabel_3 = new JLabel("Nombre:");
-		lblNewLabel_3.setBounds(41, 129, 108, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(41, 129, 108, 14);
+		contentPane.add(lblNombre);
 		
-		JLabel lblNewLabel_4 = new JLabel("Apellidos");
-		lblNewLabel_4.setBounds(41, 158, 108, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblApellido = new JLabel("Apellidos");
+		lblApellido.setBounds(41, 158, 108, 14);
+		contentPane.add(lblApellido);
 		
-		JLabel lblNewLabel_5 = new JLabel("Fecha de Nacimiento:");
-		lblNewLabel_5.setBounds(41, 187, 123, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblFechaNacimiento = new JLabel("Fecha de Nacimiento:");
+		lblFechaNacimiento.setBounds(41, 187, 123, 14);
+		contentPane.add(lblFechaNacimiento);
 		
-		JLabel lblNewLabel_6 = new JLabel("Telefono:");
-		lblNewLabel_6.setBounds(41, 216, 108, 14);
-		contentPane.add(lblNewLabel_6);
+		JLabel lblTelefono = new JLabel("Telefono:");
+		lblTelefono.setBounds(41, 216, 108, 14);
+		contentPane.add(lblTelefono);
 		
-		JLabel lblNewLabel_7 = new JLabel("Direcci\u00F3n:");
-		lblNewLabel_7.setBounds(41, 245, 108, 14);
-		contentPane.add(lblNewLabel_7);
+		JLabel lblDireccion = new JLabel("Direcci\u00F3n:");
+		lblDireccion.setBounds(41, 245, 108, 14);
+		contentPane.add(lblDireccion);
 		
-		JLabel lblNewLabel_8 = new JLabel("Email:");
-		lblNewLabel_8.setBounds(41, 274, 108, 14);
-		contentPane.add(lblNewLabel_8);
+		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setBounds(41, 274, 108, 14);
+		contentPane.add(lblEmail);
 		
-		JLabel lblNewLabel_9 = new JLabel("Genero:");
-		lblNewLabel_9.setBounds(41, 303, 108, 14);
-		contentPane.add(lblNewLabel_9);
+		JLabel lblgenero = new JLabel("Genero:");
+		lblgenero.setBounds(41, 303, 108, 14);
+		contentPane.add(lblgenero);
 		
-		JLabel lblNewLabel_10 = new JLabel("Fecha de Vinculaci\u00F3n:");
-		lblNewLabel_10.setBounds(41, 332, 123, 14);
-		contentPane.add(lblNewLabel_10);
+		JLabel lblFechaVinculacion = new JLabel("Fecha de Vinculaci\u00F3n:");
+		lblFechaVinculacion.setBounds(41, 332, 123, 14);
+		contentPane.add(lblFechaVinculacion);
 		
-		JLabel lblNewLabel_11 = new JLabel("Cargo");
-		lblNewLabel_11.setBounds(41, 361, 108, 14);
-		contentPane.add(lblNewLabel_11);
+		JLabel lblCargo = new JLabel("Cargo");
+		lblCargo.setBounds(41, 361, 108, 14);
+		contentPane.add(lblCargo);
 		
-		JLabel lblNewLabel_12 = new JLabel("Estado:");
-		lblNewLabel_12.setBounds(41, 390, 108, 14);
-		contentPane.add(lblNewLabel_12);
+		JLabel lblEstado = new JLabel("Estado:");
+		lblEstado.setBounds(41, 390, 108, 14);
+		contentPane.add(lblEstado);
 		
-		JLabel lblNewLabel_13 = new JLabel("Sede:");
-		lblNewLabel_13.setBounds(41, 419, 108, 14);
-		contentPane.add(lblNewLabel_13);
+		JLabel lblSede = new JLabel("Sede:");
+		lblSede.setBounds(41, 419, 108, 14);
+		contentPane.add(lblSede);
 		
-		JLabel lblNewLabel_14 = new JLabel("Password:");
-		lblNewLabel_14.setBounds(41, 448, 108, 14);
-		contentPane.add(lblNewLabel_14);
+		JLabel lblPasswor = new JLabel("Password:");
+		lblPasswor.setBounds(41, 448, 108, 14);
+		contentPane.add(lblPasswor);
 		
 		textFieldFechaNacimientoUsuario = new JTextField();
 		textFieldFechaNacimientoUsuario.setBounds(174, 184, 221, 20);

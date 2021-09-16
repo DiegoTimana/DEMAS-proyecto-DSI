@@ -41,17 +41,17 @@ public class VentanaGestionSedes extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("DEMAS");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 26));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(0, 11, 444, 31);
-		contentPane.add(lblNewLabel);
+		JLabel lbltitulo = new JLabel("DEMAS");
+		lbltitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
+		lbltitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lbltitulo.setBounds(0, 11, 444, 31);
+		contentPane.add(lbltitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Gestion de Sedes");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(0, 50, 434, 25);
-		contentPane.add(lblNewLabel_1);
+		JLabel lbltituloventana = new JLabel("Gestion de Sedes");
+		lbltituloventana.setHorizontalAlignment(SwingConstants.CENTER);
+		lbltituloventana.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbltituloventana.setBounds(0, 50, 434, 25);
+		contentPane.add(lbltituloventana);
 		
 		JLabel labelIdSede = new JLabel("ID Sedes:");
 		labelIdSede.setBounds(41, 100, 59, 14);
