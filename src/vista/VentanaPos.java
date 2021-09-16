@@ -15,6 +15,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class VentanaPos extends JFrame {
 
@@ -38,7 +39,7 @@ public class VentanaPos extends JFrame {
 	 */
 	public VentanaPos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 640, 601);
+		setBounds(100, 100, 640, 637);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -218,5 +219,17 @@ public class VentanaPos extends JFrame {
 		JButton btnGenerarRecibo = new JButton("Generar Recibo");
 		btnGenerarRecibo.setBounds(421, 505, 174, 23);
 		contentPane.add(btnGenerarRecibo);
+		
+		JButton btnVolverAtras = new JButton("Volver Atr\u00E1s");
+		btnVolverAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGerente ventana = new VentanaGerente();
+				setVisible(false);
+				ventana.setVisible(true);
+				ventana.setLocationRelativeTo(null);
+			}
+		});
+		btnVolverAtras.setBounds(272, 554, 115, 23);
+		contentPane.add(btnVolverAtras);
 	}
 }

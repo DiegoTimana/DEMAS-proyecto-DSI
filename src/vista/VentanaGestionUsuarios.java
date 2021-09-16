@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class VentanaGestionUsuarios extends JFrame {
 
@@ -35,6 +36,7 @@ public class VentanaGestionUsuarios extends JFrame {
 	public JButton btnEliminarUsuario;
 	public JButton btnLimpiarUsuario;
 	public JButton btnBuscarUsuario;
+	private JButton btnVolverAtras;
 
 	/**
 	 * Launch the application.
@@ -46,7 +48,7 @@ public class VentanaGestionUsuarios extends JFrame {
 	 */
 	public VentanaGestionUsuarios() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 560, 570);
+		setBounds(100, 100, 560, 621);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -207,5 +209,17 @@ public class VentanaGestionUsuarios extends JFrame {
 		comboBoxEstadoUsuario = new JComboBox(estadoStrings);
 		comboBoxEstadoUsuario.setBounds(174, 386, 221, 22);
 		contentPane.add(comboBoxEstadoUsuario);
+		
+		btnVolverAtras = new JButton("Volver Atr\u00E1s");
+		btnVolverAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {			
+				VentanaGerente ventana = new VentanaGerente();
+				setVisible(false);
+				ventana.setVisible(true);
+				ventana.setLocationRelativeTo(null);
+			}
+		});
+		btnVolverAtras.setBounds(232, 540, 115, 23);
+		contentPane.add(btnVolverAtras);
 	}
 }

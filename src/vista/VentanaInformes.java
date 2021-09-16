@@ -19,27 +19,11 @@ public class VentanaInformes extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaInformes frame = new VentanaInformes();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public VentanaInformes() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 504, 454);
+		setBounds(100, 100, 500, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -89,5 +73,17 @@ public class VentanaInformes extends JFrame {
 		btnGrExcel.setIcon(new ImageIcon(VentanaInformes.class.getResource("/imagenes/excel.png")));
 		btnGrExcel.setBounds(230, 278, 109, 46);
 		contentPane.add(btnGrExcel);
+		
+		JButton btnVolverAtras = new JButton("Volver Atr\u00E1s");
+		btnVolverAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGerente ventana = new VentanaGerente();
+				setVisible(false);
+				ventana.setVisible(true);
+				ventana.setLocationRelativeTo(null);
+			}
+		});
+		btnVolverAtras.setBounds(168, 367, 115, 23);
+		contentPane.add(btnVolverAtras);
 	}
 }

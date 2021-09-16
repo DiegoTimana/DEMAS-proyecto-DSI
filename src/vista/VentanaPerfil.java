@@ -14,6 +14,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VentanaPerfil extends JFrame {
 
@@ -30,7 +33,7 @@ public class VentanaPerfil extends JFrame {
 	 */
 	public VentanaPerfil() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 528, 310);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -39,65 +42,73 @@ public class VentanaPerfil extends JFrame {
 		JLabel lblTitulo = new JLabel("DEMAS");
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblTitulo.setBounds(10, 11, 414, 26);
+		lblTitulo.setBounds(10, 11, 504, 26);
 		contentPane.add(lblTitulo);
 		
 		JLabel lblSede = new JLabel("Sede:");
-		lblSede.setBounds(10, 166, 46, 14);
+		lblSede.setBounds(10, 166, 60, 14);
 		contentPane.add(lblSede);
 		
 		JLabel lblCargo = new JLabel("Cargo:");
-		lblCargo.setBounds(10, 141, 46, 14);
+		lblCargo.setBounds(10, 141, 60, 14);
 		contentPane.add(lblCargo);
 		
 		JLabel lblCedula = new JLabel("Cedula:");
-		lblCedula.setBounds(10, 116, 46, 14);
+		lblCedula.setBounds(10, 116, 60, 14);
 		contentPane.add(lblCedula);
 		
 		JLabel lblTituloVentana = new JLabel("Perfil");
 		lblTituloVentana.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTituloVentana.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblTituloVentana.setBounds(10, 48, 414, 14);
+		lblTituloVentana.setBounds(10, 48, 504, 14);
 		contentPane.add(lblTituloVentana);
 		
 		JLabel lblNombre = new JLabel("Nombre:");
-		lblNombre.setBounds(10, 91, 46, 14);
+		lblNombre.setBounds(10, 91, 60, 14);
 		contentPane.add(lblNombre);
 		
 		JLabel lblPassword = new JLabel("Password:");
-		lblPassword.setBounds(10, 191, 56, 14);
+		lblPassword.setBounds(10, 191, 60, 14);
 		contentPane.add(lblPassword);
 		
 		textFieldNombre = new JTextField();
-		textFieldNombre.setBounds(76, 88, 194, 20);
+		textFieldNombre.setBounds(130, 91, 194, 20);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		textFieldCedula = new JTextField();
-		textFieldCedula.setBounds(76, 113, 194, 20);
+		textFieldCedula.setBounds(130, 116, 194, 20);
 		contentPane.add(textFieldCedula);
 		textFieldCedula.setColumns(10);
 		
 		textFieldCargo = new JTextField();
-		textFieldCargo.setBounds(76, 138, 194, 20);
+		textFieldCargo.setBounds(130, 141, 194, 20);
 		contentPane.add(textFieldCargo);
 		textFieldCargo.setColumns(10);
 		
 		textFieldSede = new JTextField();
-		textFieldSede.setBounds(76, 163, 194, 20);
+		textFieldSede.setBounds(130, 166, 194, 20);
 		contentPane.add(textFieldSede);
 		textFieldSede.setColumns(10);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(76, 188, 194, 20);
+		passwordField.setBounds(130, 191, 194, 20);
 		contentPane.add(passwordField);
 		
 		JButton btnNewButton = new JButton("Actualizar");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnNewButton.setBounds(368, 191, 113, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnVolverAtrs = new JButton("Volver Atr\u00E1s");
+		btnVolverAtrs.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				VentanaGerente ventana = new VentanaGerente();
+				setVisible(false);
+				ventana.setVisible(true);
+				ventana.setLocationRelativeTo(null);
 			}
 		});
-		btnNewButton.setBounds(293, 187, 89, 23);
-		contentPane.add(btnNewButton);
+		btnVolverAtrs.setBounds(368, 234, 113, 23);
+		contentPane.add(btnVolverAtrs);
 	}
 }

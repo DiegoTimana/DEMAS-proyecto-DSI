@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class VentanaGestionSedes extends JFrame {
 
@@ -27,6 +28,7 @@ public class VentanaGestionSedes extends JFrame {
 	public JButton btnEliminarSede;
 	public JButton btnLimpiarSede; 
 	public JButton btnBuscarSede; 
+	private JButton btnVolverAtras;
 	
 
 	/**
@@ -35,17 +37,11 @@ public class VentanaGestionSedes extends JFrame {
 	public VentanaGestionSedes() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 400);
+		setBounds(100, 100, 507, 438);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lbltitulo = new JLabel("DEMAS");
-		lbltitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
-		lbltitulo.setHorizontalAlignment(SwingConstants.CENTER);
-		lbltitulo.setBounds(0, 11, 444, 31);
-		contentPane.add(lbltitulo);
 		
 		JLabel lbltituloventana = new JLabel("Gestion de Sedes");
 		lbltituloventana.setHorizontalAlignment(SwingConstants.CENTER);
@@ -53,48 +49,54 @@ public class VentanaGestionSedes extends JFrame {
 		lbltituloventana.setBounds(0, 50, 434, 25);
 		contentPane.add(lbltituloventana);
 		
+		JLabel lbltitulo = new JLabel("DEMAS");
+		lbltitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
+		lbltitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lbltitulo.setBounds(0, 11, 444, 31);
+		contentPane.add(lbltitulo);
+		
 		JLabel labelIdSede = new JLabel("ID Sedes:");
-		labelIdSede.setBounds(41, 100, 59, 14);
+		labelIdSede.setBounds(41, 100, 70, 14);
 		contentPane.add(labelIdSede);
 		
 		JLabel labelNombreSede = new JLabel("Nombre:");
-		labelNombreSede.setBounds(41, 134, 46, 14);
+		labelNombreSede.setBounds(41, 134, 70, 14);
 		contentPane.add(labelNombreSede);
 		
 		JLabel labelDireccionSede = new JLabel("Direcci\u00F3n:");
-		labelDireccionSede.setBounds(41, 168, 59, 14);
+		labelDireccionSede.setBounds(41, 168, 70, 14);
 		contentPane.add(labelDireccionSede);
 		
 		JLabel labelTelefonoSede = new JLabel("Telefono:");
-		labelTelefonoSede.setBounds(41, 202, 46, 14);
+		labelTelefonoSede.setBounds(41, 202, 70, 14);
 		contentPane.add(labelTelefonoSede);
 		
 		JLabel labelEstadoSede = new JLabel("Estado:");
-		labelEstadoSede.setBounds(41, 236, 46, 14);
+		labelEstadoSede.setBounds(41, 236, 70, 14);
 		contentPane.add(labelEstadoSede);
 		
 		textFieldIdSede = new JTextField();
-		textFieldIdSede.setBounds(96, 97, 220, 20);
+		textFieldIdSede.setBounds(141, 94, 220, 20);
 		contentPane.add(textFieldIdSede);
 		textFieldIdSede.setColumns(10);
 		
 		textFieldNombreSede = new JTextField();
-		textFieldNombreSede.setBounds(97, 131, 219, 20);
+		textFieldNombreSede.setBounds(142, 128, 219, 20);
 		contentPane.add(textFieldNombreSede);
 		textFieldNombreSede.setColumns(10);
 		
 		textFieldDireccionSede = new JTextField();
-		textFieldDireccionSede.setBounds(97, 165, 219, 20);
+		textFieldDireccionSede.setBounds(142, 162, 219, 20);
 		contentPane.add(textFieldDireccionSede);
 		textFieldDireccionSede.setColumns(10);
 		
 		textFieldTelefonoSede = new JTextField();
-		textFieldTelefonoSede.setBounds(97, 199, 219, 20);
+		textFieldTelefonoSede.setBounds(142, 196, 219, 20);
 		contentPane.add(textFieldTelefonoSede);
 		textFieldTelefonoSede.setColumns(10);
 		
 		textFieldEstadoSede = new JTextField();
-		textFieldEstadoSede.setBounds(97, 233, 219, 20);
+		textFieldEstadoSede.setBounds(142, 230, 219, 20);
 		contentPane.add(textFieldEstadoSede);
 		textFieldEstadoSede.setColumns(10);
 		
@@ -103,15 +105,15 @@ public class VentanaGestionSedes extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnGuardarSede.setBounds(41, 304, 75, 23);
+		btnGuardarSede.setBounds(41, 304, 90, 23);
 		contentPane.add(btnGuardarSede);
 		
 		btnModificarSede = new JButton("Modificar");
-		btnModificarSede.setBounds(140, 304, 75, 23);
+		btnModificarSede.setBounds(157, 304, 90, 23);
 		contentPane.add(btnModificarSede);
 		
 		btnEliminarSede = new JButton("Eliminar");
-		btnEliminarSede.setBounds(235, 304, 75, 23);
+		btnEliminarSede.setBounds(271, 304, 90, 23);
 		contentPane.add(btnEliminarSede);
 		
 		btnLimpiarSede = new JButton("Limpiar");
@@ -119,12 +121,28 @@ public class VentanaGestionSedes extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnLimpiarSede.setBounds(334, 304, 75, 23);
+		btnLimpiarSede.setBounds(385, 304, 90, 23);
 		contentPane.add(btnLimpiarSede);
 		
 		btnBuscarSede = new JButton("Buscar");
-		btnBuscarSede.setBounds(334, 96, 89, 23);
+		btnBuscarSede.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnBuscarSede.setBounds(386, 96, 89, 23);
 		contentPane.add(btnBuscarSede);
+		
+		btnVolverAtras = new JButton("Volver Atr\u00E1s");
+		btnVolverAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaGerente ventana = new VentanaGerente();
+				setVisible(false);
+				ventana.setVisible(true);
+				ventana.setLocationRelativeTo(null);
+			}
+		});
+		btnVolverAtras.setBounds(205, 362, 115, 23);
+		contentPane.add(btnVolverAtras);
 	}
 
 }
