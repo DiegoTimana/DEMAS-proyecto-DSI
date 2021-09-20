@@ -1,8 +1,12 @@
 package principal;
 
 
+import java.sql.*;
+
+
 import controlador.ControladorLogin;
 import controlador.ControladorSedes;
+import modelo.Con_postgresql;
 import modelo.Conexion;
 import modelo.ConsultasSede;
 import modelo.Sede;
@@ -14,6 +18,15 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		try {
+			Connection conex = Con_postgresql.getConnection();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
 		
 		/*
 		VentanaLogin ventanaInicio = new VentanaLogin();
