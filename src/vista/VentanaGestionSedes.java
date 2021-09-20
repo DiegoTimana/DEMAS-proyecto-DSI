@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.ValidacionTextFields;
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -14,6 +17,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class VentanaGestionSedes extends JFrame {
 
@@ -21,7 +28,6 @@ public class VentanaGestionSedes extends JFrame {
 	public JTextField textFieldNombreSede;
 	public JTextField textFieldDireccionSede;
 	public JTextField textFieldTelefonoSede;
-	public JTextField textFieldEstadoSede;
 	public JTextField textFieldIdSede;
 	public JButton btnGuardarSede;
 	public JButton btnModificarSede; 
@@ -29,6 +35,7 @@ public class VentanaGestionSedes extends JFrame {
 	public JButton btnLimpiarSede; 
 	public JButton btnBuscarSede; 
 	private JButton btnVolverAtras;
+	ValidacionTextFields textf = new ValidacionTextFields();
 	
 
 	/**
@@ -75,12 +82,29 @@ public class VentanaGestionSedes extends JFrame {
 		labelEstadoSede.setBounds(41, 236, 70, 14);
 		contentPane.add(labelEstadoSede);
 		
+		
+		//TEXT FIELDS los listener son para validar que se puede escribir y que no
 		textFieldIdSede = new JTextField();
+		textFieldIdSede.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldIdSede.setBounds(141, 94, 220, 20);
 		contentPane.add(textFieldIdSede);
 		textFieldIdSede.setColumns(10);
 		
 		textFieldNombreSede = new JTextField();
+		textFieldNombreSede.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+			}
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldNombreSede.setBounds(142, 128, 219, 20);
 		contentPane.add(textFieldNombreSede);
 		textFieldNombreSede.setColumns(10);
@@ -91,14 +115,18 @@ public class VentanaGestionSedes extends JFrame {
 		textFieldDireccionSede.setColumns(10);
 		
 		textFieldTelefonoSede = new JTextField();
+		textFieldTelefonoSede.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+			}
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldTelefonoSede.setBounds(142, 196, 219, 20);
 		contentPane.add(textFieldTelefonoSede);
 		textFieldTelefonoSede.setColumns(10);
-		
-		textFieldEstadoSede = new JTextField();
-		textFieldEstadoSede.setBounds(142, 230, 219, 20);
-		contentPane.add(textFieldEstadoSede);
-		textFieldEstadoSede.setColumns(10);
 		
 		btnGuardarSede = new JButton("Guardar");
 		btnGuardarSede.addActionListener(new ActionListener() {
@@ -143,6 +171,10 @@ public class VentanaGestionSedes extends JFrame {
 		});
 		btnVolverAtras.setBounds(205, 362, 115, 23);
 		contentPane.add(btnVolverAtras);
+		
+		JComboBox comboBoxEstadoUsuario = new JComboBox(new Object[]{});
+		comboBoxEstadoUsuario.setModel(new DefaultComboBoxModel(new String[] {"", "Activo ", "Inactivo"}));
+		comboBoxEstadoUsuario.setBounds(140, 233, 221, 22);
+		contentPane.add(comboBoxEstadoUsuario);
 	}
-
 }

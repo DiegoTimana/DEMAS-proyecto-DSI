@@ -59,9 +59,12 @@ public class VentanaCambioPass extends JFrame {
 		lblConfirmarPss.setBounds(10, 285, 152, 20);
 		contentPane.add(lblConfirmarPss);
 		
+		
+		//TEXT FIELDS el campo usuario no es editable, solo se muestra. las contraseñas hay que validarlas
 		textFieldUsuario = new JTextField();
 		textFieldUsuario.setColumns(10);
 		textFieldUsuario.setBounds(179, 63, 200, 20);
+		textFieldUsuario.setEditable(false);
 		contentPane.add(textFieldUsuario);
 		
 		textFieldVariable = new JTextField();

@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.ValidacionTextFields;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -16,6 +19,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VentanaPos extends JFrame {
 
@@ -32,6 +39,8 @@ public class VentanaPos extends JFrame {
 	private JTextField textFieldImpuesto;
 	private JTextField textFieldDireccionOrigen;
 	private JTextField textFieldTotalVenta;
+	ValidacionTextFields textf = new ValidacionTextFields();
+	final VentanaValidacionTarjeta windowtarjeta = new VentanaValidacionTarjeta();
 
 
 	/**
@@ -57,17 +66,37 @@ public class VentanaPos extends JFrame {
 		lblTituloVentana.setBounds(10, 53, 666, 23);
 		contentPane.add(lblTituloVentana);
 		
+		
+		//TEXT FIELDS
 		textFieldNombre = new JTextField();
+		textFieldNombre.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldNombre.setBounds(142, 144, 321, 20);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		textFieldApellido = new JTextField();
+		textFieldApellido.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldApellido.setBounds(142, 175, 321, 20);
 		contentPane.add(textFieldApellido);
 		textFieldApellido.setColumns(10);
 		
 		textFieldId = new JTextField();
+		textFieldId.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldId.setBounds(142, 115, 321, 20);
 		contentPane.add(textFieldId);
 		textFieldId.setColumns(10);
@@ -94,21 +123,45 @@ public class VentanaPos extends JFrame {
 		contentPane.add(lblTelefono);
 		
 		textFieldContenido = new JTextField();
+		textFieldContenido.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldContenido.setBounds(172, 383, 269, 20);
 		contentPane.add(textFieldContenido);
 		textFieldContenido.setColumns(10);
 		
 		textFieldTelefono = new JTextField();
+		textFieldTelefono.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldTelefono.setBounds(142, 237, 321, 20);
 		contentPane.add(textFieldTelefono);
 		textFieldTelefono.setColumns(10);
 		
 		textFieldPeso = new JTextField();
+		textFieldPeso.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numDecKeyPress(e, textFieldPeso);
+			}
+		});
 		textFieldPeso.setBounds(172, 414, 269, 20);
 		contentPane.add(textFieldPeso);
 		textFieldPeso.setColumns(10);
 		
 		textFieldSeguro = new JTextField();
+		textFieldSeguro.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numDecKeyPress(e, textFieldSeguro);
+			}
+		});
 		textFieldSeguro.setBounds(172, 445, 269, 20);
 		contentPane.add(textFieldSeguro);
 		textFieldSeguro.setColumns(10);
@@ -119,6 +172,12 @@ public class VentanaPos extends JFrame {
 		textFieldDireccionVenta.setColumns(10);
 		
 		textFieldImpuesto = new JTextField();
+		textFieldImpuesto.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numDecKeyPress(e, textFieldImpuesto);
+			}
+		});
 		textFieldImpuesto.setBounds(172, 476, 269, 20);
 		contentPane.add(textFieldImpuesto);
 		textFieldImpuesto.setColumns(10);
@@ -140,7 +199,7 @@ public class VentanaPos extends JFrame {
 		lblInfoVenta.setBounds(10, 287, 614, 23);
 		contentPane.add(lblInfoVenta);
 		
-		JLabel lblPeso = new JLabel("Peso:");
+		JLabel lblPeso = new JLabel("Peso (kg):");
 		lblPeso.setBounds(10, 416, 130, 14);
 		contentPane.add(lblPeso);
 		
@@ -158,7 +217,7 @@ public class VentanaPos extends JFrame {
 		lblInfoCliente.setBounds(10, 87, 614, 18);
 		contentPane.add(lblInfoCliente);
 		
-		JLabel lblSeguro = new JLabel("Seguro:");
+		JLabel lblSeguro = new JLabel("Valor del Seguro:");
 		lblSeguro.setBounds(10, 447, 130, 14);
 		contentPane.add(lblSeguro);
 		
@@ -171,6 +230,12 @@ public class VentanaPos extends JFrame {
 		contentPane.add(lblTotalVenta);
 		
 		textFieldTotalVenta = new JTextField();
+		textFieldTotalVenta.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numDecKeyPress(e, textFieldTotalVenta);
+			}
+		});
 		textFieldTotalVenta.setBounds(172, 507, 269, 20);
 		contentPane.add(textFieldTotalVenta);
 		textFieldTotalVenta.setColumns(10);
@@ -189,6 +254,14 @@ public class VentanaPos extends JFrame {
 		contentPane.add(rdbtnTarjeta);
 		
 		JButton btnValidarPago = new JButton("Validar Pago");
+		btnValidarPago.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				windowtarjeta.setVisible(true);
+				windowtarjeta.setLocationRelativeTo(null);
+				dispose();			
+			}
+		});
 		btnValidarPago.setBounds(565, 379, 110, 23);
 		contentPane.add(btnValidarPago);
 		

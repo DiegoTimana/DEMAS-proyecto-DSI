@@ -71,28 +71,34 @@ public class VentanaPerfil extends JFrame {
 		lblPassword.setBounds(10, 191, 60, 14);
 		contentPane.add(lblPassword);
 		
+		/////TEXT FIELDS (los text fields de esta ventana no son editables, solo se muestra la informacion que ya se encuentra en la bd)
 		textFieldNombre = new JTextField();
 		textFieldNombre.setBounds(130, 91, 194, 20);
+		textFieldNombre.setEditable(false);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		textFieldCedula = new JTextField();
 		textFieldCedula.setBounds(130, 116, 194, 20);
+		textFieldCedula.setEditable(false);
 		contentPane.add(textFieldCedula);
 		textFieldCedula.setColumns(10);
 		
 		textFieldCargo = new JTextField();
 		textFieldCargo.setBounds(130, 141, 194, 20);
+		textFieldCargo.setEditable(false);
 		contentPane.add(textFieldCargo);
 		textFieldCargo.setColumns(10);
 		
 		textFieldSede = new JTextField();
 		textFieldSede.setBounds(130, 166, 194, 20);
+		textFieldSede.setEditable(false);
 		contentPane.add(textFieldSede);
 		textFieldSede.setColumns(10);
 		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(130, 191, 194, 20);
+		passwordField.setEditable(false);
 		contentPane.add(passwordField);
 		
 		

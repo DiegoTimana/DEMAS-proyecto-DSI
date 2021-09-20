@@ -3,6 +3,9 @@ package vista;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.ValidacionTextFields;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -13,6 +16,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class VentanaGestionUsuarios extends JFrame {
 
@@ -37,6 +42,7 @@ public class VentanaGestionUsuarios extends JFrame {
 	public JButton btnLimpiarUsuario;
 	public JButton btnBuscarUsuario;
 	private JButton btnVolverAtras;
+	ValidacionTextFields textf = new ValidacionTextFields();
 
 	/**
 	 * Launch the application.
@@ -111,7 +117,7 @@ public class VentanaGestionUsuarios extends JFrame {
 		lblEstado.setBounds(41, 390, 108, 14);
 		contentPane.add(lblEstado);
 		
-		JLabel lblSede = new JLabel("Sede:");
+		JLabel lblSede = new JLabel("Id Sede:");
 		lblSede.setBounds(41, 419, 108, 14);
 		contentPane.add(lblSede);
 		
@@ -119,27 +125,53 @@ public class VentanaGestionUsuarios extends JFrame {
 		lblPasswor.setBounds(41, 448, 108, 14);
 		contentPane.add(lblPasswor);
 		
+		
+		//TEXT FIELDS 
 		textFieldFechaNacimientoUsuario = new JTextField();
 		textFieldFechaNacimientoUsuario.setBounds(174, 184, 221, 20);
 		contentPane.add(textFieldFechaNacimientoUsuario);
 		textFieldFechaNacimientoUsuario.setColumns(10);
 		
 		textFieldApellidosUsuario = new JTextField();
+		textFieldApellidosUsuario.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldApellidosUsuario.setBounds(174, 155, 221, 20);
 		contentPane.add(textFieldApellidosUsuario);
 		textFieldApellidosUsuario.setColumns(10);
 		
 		textFieldNombreUsuario = new JTextField();
+		textFieldNombreUsuario.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldNombreUsuario.setBounds(174, 126, 221, 20);
 		contentPane.add(textFieldNombreUsuario);
 		textFieldNombreUsuario.setColumns(10);
 		
 		textFieldIdUsuario = new JTextField();
+		textFieldIdUsuario.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldIdUsuario.setBounds(174, 97, 221, 20);
 		contentPane.add(textFieldIdUsuario);
 		textFieldIdUsuario.setColumns(10);
 		
 		textFieldTelefonoUsuario = new JTextField();
+		textFieldTelefonoUsuario.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldTelefonoUsuario.setBounds(174, 213, 221, 20);
 		contentPane.add(textFieldTelefonoUsuario);
 		textFieldTelefonoUsuario.setColumns(10);
@@ -160,11 +192,23 @@ public class VentanaGestionUsuarios extends JFrame {
 		textFieldFechaVinculacionUsuario.setColumns(10);
 		
 		textFieldCargoUsuario = new JTextField();
+		textFieldCargoUsuario.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldCargoUsuario.setBounds(174, 358, 221, 20);
 		contentPane.add(textFieldCargoUsuario);
 		textFieldCargoUsuario.setColumns(10);
 		
 		textFieldSedeUsuario = new JTextField();
+		textFieldSedeUsuario.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldSedeUsuario.setBounds(174, 416, 221, 20);
 		contentPane.add(textFieldSedeUsuario);
 		textFieldSedeUsuario.setColumns(10);

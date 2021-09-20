@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.ValidacionTextFields;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -13,6 +16,9 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class VentanaValidacionTarjeta extends JFrame {
 
@@ -20,6 +26,7 @@ public class VentanaValidacionTarjeta extends JFrame {
 	private JTextField textFieldNombre;
 	private JTextField textFieldNumTrajeta;
 	private JTextField textFieldCvv;
+	ValidacionTextFields textf = new ValidacionTextFields();
 
 	/**
 	 * Create the frame.
@@ -59,12 +66,25 @@ public class VentanaValidacionTarjeta extends JFrame {
 		lblNewLabel_3.setBounds(10, 223, 113, 20);
 		contentPane.add(lblNewLabel_3);
 		
+		//TEXT FIELDS
 		textFieldNombre = new JTextField();
+		textFieldNombre.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.textKeyPress(e);
+			}
+		});
 		textFieldNombre.setBounds(133, 192, 224, 20);
 		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		textFieldNumTrajeta = new JTextField();
+		textFieldNumTrajeta.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldNumTrajeta.setBounds(133, 223, 224, 20);
 		contentPane.add(textFieldNumTrajeta);
 		textFieldNumTrajeta.setColumns(10);
@@ -79,6 +99,12 @@ public class VentanaValidacionTarjeta extends JFrame {
 		contentPane.add(lblCvv);
 		
 		textFieldCvv = new JTextField();
+		textFieldCvv.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				textf.numKeyPress(e);
+			}
+		});
 		textFieldCvv.setBounds(133, 297, 224, 20);
 		contentPane.add(textFieldCvv);
 		textFieldCvv.setColumns(10);
@@ -89,6 +115,7 @@ public class VentanaValidacionTarjeta extends JFrame {
 		contentPane.add(lblInfoTitular);
 		
 		JComboBox comboBoxTipoTarjea = new JComboBox();
+		comboBoxTipoTarjea.setModel(new DefaultComboBoxModel(new String[] {"", "Bancolombia", "Visa", "Mastercard", "BBVA", "Colpatria", "Davivienda", "AV Villas", "Colpatria"}));
 		comboBoxTipoTarjea.setBounds(10, 83, 140, 22);
 		contentPane.add(comboBoxTipoTarjea);
 		
