@@ -2,6 +2,7 @@ package vista;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 
 import controlador.ValidacionTextFields;
@@ -258,7 +259,7 @@ public class VentanaGestionUsuarios extends JFrame {
 		contentPane.add(textFieldSedeUsuario);
 		textFieldSedeUsuario.setColumns(10);
 		
-		textFieldPasswordUsuario = new JTextField();
+		textFieldPasswordUsuario = new JPasswordField();
 		textFieldPasswordUsuario.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -346,7 +347,25 @@ public class VentanaGestionUsuarios extends JFrame {
 		btnEliminarUsuario.setBounds(368, 485, 88, 23);
 		contentPane.add(btnEliminarUsuario);
 		
+		//BOTON LIMPIAR, BORRA LO QUE HAYA EN LOS TEXT FIELDS
 		btnLimpiarUsuario = new JButton("Limpiar");
+		btnLimpiarUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				verificar.limpiar(textFieldIdUsuario);
+				verificar.limpiar(textFieldNombreUsuario);
+				verificar.limpiar(textFieldApellidosUsuario);
+				verificar.limpiar(textFieldFechaNacimientoUsuario);
+				verificar.limpiar(textFieldTelefonoUsuario);
+				verificar.limpiar(textFieldDireccionUsuario);
+				verificar.limpiar(textFieldEmailUsuario);
+				verificar.limpiar(textFieldFechaVinculacionUsuario);
+				verificar.limpiar(textFieldCargoUsuario);
+				verificar.limpiar(textFieldSedeUsuario);
+				verificar.limpiar(textFieldPasswordUsuario);
+				comboBoxGeneroUsuario.setSelectedIndex(0);
+				comboBoxEstadoUsuario.setSelectedIndex(0);
+			}
+		});
 		btnLimpiarUsuario.setBounds(494, 485, 88, 23);
 		contentPane.add(btnLimpiarUsuario);
 		

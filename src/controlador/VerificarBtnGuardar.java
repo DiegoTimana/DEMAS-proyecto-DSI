@@ -15,5 +15,9 @@ public class VerificarBtnGuardar {
 			label.setForeground(Color.RED);
 			field.requestFocus();
 	}
-
+	
+	//PARA LOS BOTONES "LIMPIAR" funcion que limpia los jtextfields
+	public void limpiar(JTextField field) {
+		field.setText("");
+	}
 }

@@ -171,7 +171,16 @@ public class VentanaValidacionTarjeta extends JFrame {
 		btnAceptar.setBounds(133, 353, 89, 23);
 		contentPane.add(btnAceptar);
 		
+		//BOTON CANCELAR (Vuelve a la ventana anterior)
 		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaPos windowPos = new VentanaPos();
+				windowPos.setVisible(true);
+				windowPos.setLocationRelativeTo(null);
+				dispose();
+			}
+		});
 		btnCancelar.setBounds(268, 353, 89, 23);
 		contentPane.add(btnCancelar);
 	}

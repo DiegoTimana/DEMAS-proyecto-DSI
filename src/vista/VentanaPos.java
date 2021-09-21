@@ -43,7 +43,7 @@ public class VentanaPos extends JFrame {
 	private JTextField textFieldTotalVenta;
 	ValidacionTextFields textf = new ValidacionTextFields();
 	final VentanaValidacionTarjeta windowtarjeta = new VentanaValidacionTarjeta();
-	VerificarBtnGuardar verificar = new VerificarBtnGuardar();
+    VerificarBtnGuardar verificar = new VerificarBtnGuardar();
 
 
 	/**
@@ -299,6 +299,10 @@ public class VentanaPos extends JFrame {
 		contentPane.add(rdbtnTarjeta);
 		
 		JButton btnValidarPago = new JButton("Validar Pago");
+		btnValidarPago.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnValidarPago.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -403,5 +407,36 @@ public class VentanaPos extends JFrame {
 		});
 		btnVolverAtras.setBounds(370, 591, 115, 23);
 		contentPane.add(btnVolverAtras);
+		
+		
+		//BOTON LIMPIAR, PARA LA PARTE DEL CLIENTE
+		JButton btnLimpiar = new JButton("Limpiar");
+		btnLimpiar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				verificar.limpiar(textFieldId);
+				verificar.limpiar(textFieldNombre);
+				verificar.limpiar(textFieldApellido);
+				verificar.limpiar(textFieldDireccion);
+				verificar.limpiar(textFieldTelefono);				
+			}
+		});
+		btnLimpiar.setBounds(674, 210, 130, 23);
+		contentPane.add(btnLimpiar);
+		
+		//BOTON LIMPIAR PARA LA PARTE DE LA VENTA
+		JButton btnLimpiar2 = new JButton("Limpiar");
+		btnLimpiar2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				verificar.limpiar(textFieldDireccionOrigen);
+				verificar.limpiar(textFieldDireccionVenta);
+				verificar.limpiar(textFieldContenido);
+				verificar.limpiar(textFieldPeso);
+				verificar.limpiar(textFieldSeguro);
+				verificar.limpiar(textFieldImpuesto);
+				verificar.limpiar(textFieldTotalVenta);
+			}
+		});
+		btnLimpiar2.setBounds(630, 540, 174, 23);
+		contentPane.add(btnLimpiar2);
 	}
 }

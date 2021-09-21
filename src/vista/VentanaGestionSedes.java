@@ -199,9 +199,15 @@ public class VentanaGestionSedes extends JFrame {
 		btnEliminarSede.setBounds(309, 302, 90, 23);
 		contentPane.add(btnEliminarSede);
 		
+		//Bonton limpiar, sirve para borrar todo lo que hayamos escrito en un text field
 		btnLimpiarSede = new JButton("Limpiar");
 		btnLimpiarSede.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				verificar.limpiar(textFieldIdSede);
+				verificar.limpiar(textFieldNombreSede);
+				verificar.limpiar(textFieldDireccionSede);
+				verificar.limpiar(textFieldTelefonoSede);
+				comboBoxEstadoUsuario.setSelectedIndex(0);
 			}
 		});
 		btnLimpiarSede.setBounds(423, 302, 90, 23);
