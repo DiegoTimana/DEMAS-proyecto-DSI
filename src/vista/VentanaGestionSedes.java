@@ -1,6 +1,7 @@
 package vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import controlador.ValidacionTextFields;
+import controlador.VerificarBtnGuardar;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -21,6 +23,8 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VentanaGestionSedes extends JFrame {
 
@@ -36,6 +40,7 @@ public class VentanaGestionSedes extends JFrame {
 	public JButton btnBuscarSede; 
 	private JButton btnVolverAtras;
 	ValidacionTextFields textf = new ValidacionTextFields();
+	VerificarBtnGuardar verificar = new VerificarBtnGuardar();
 	
 
 	/**
@@ -44,7 +49,7 @@ public class VentanaGestionSedes extends JFrame {
 	public VentanaGestionSedes() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 507, 438);
+		setBounds(100, 100, 595, 438);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -53,34 +58,47 @@ public class VentanaGestionSedes extends JFrame {
 		JLabel lbltituloventana = new JLabel("Gestion de Sedes");
 		lbltituloventana.setHorizontalAlignment(SwingConstants.CENTER);
 		lbltituloventana.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lbltituloventana.setBounds(0, 50, 434, 25);
+		lbltituloventana.setBounds(0, 50, 581, 25);
 		contentPane.add(lbltituloventana);
 		
 		JLabel lbltitulo = new JLabel("DEMAS");
 		lbltitulo.setFont(new Font("Tahoma", Font.BOLD, 26));
 		lbltitulo.setHorizontalAlignment(SwingConstants.CENTER);
-		lbltitulo.setBounds(0, 11, 444, 31);
+		lbltitulo.setBounds(0, 11, 581, 31);
 		contentPane.add(lbltitulo);
 		
-		JLabel labelIdSede = new JLabel("ID Sedes:");
-		labelIdSede.setBounds(41, 100, 70, 14);
+		JLabel labelIdSede = new JLabel("ID Sede:");
+		labelIdSede.setBounds(41, 100, 120, 14);
 		contentPane.add(labelIdSede);
 		
 		JLabel labelNombreSede = new JLabel("Nombre:");
-		labelNombreSede.setBounds(41, 134, 70, 14);
+		labelNombreSede.setBounds(41, 134, 120, 14);
 		contentPane.add(labelNombreSede);
 		
 		JLabel labelDireccionSede = new JLabel("Direcci\u00F3n:");
-		labelDireccionSede.setBounds(41, 168, 70, 14);
+		labelDireccionSede.setBounds(41, 168, 120, 14);
 		contentPane.add(labelDireccionSede);
 		
 		JLabel labelTelefonoSede = new JLabel("Telefono:");
-		labelTelefonoSede.setBounds(41, 202, 70, 14);
+		labelTelefonoSede.setBounds(41, 202, 120, 14);
 		contentPane.add(labelTelefonoSede);
 		
 		JLabel labelEstadoSede = new JLabel("Estado:");
-		labelEstadoSede.setBounds(41, 236, 70, 14);
+		labelEstadoSede.setBounds(41, 236, 120, 14);
 		contentPane.add(labelEstadoSede);
+		
+		
+		JComboBox comboBoxEstadoUsuario = new JComboBox(new Object[]{});
+		comboBoxEstadoUsuario.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				labelEstadoSede.setText("Estado:");
+				labelEstadoSede.setForeground(Color.BLACK);
+			}
+		});
+		comboBoxEstadoUsuario.setModel(new DefaultComboBoxModel(new String[] {"Seleccione una opci\u00F3n", "Activo ", "Inactivo"}));
+		comboBoxEstadoUsuario.setBounds(195, 239, 221, 22);
+		contentPane.add(comboBoxEstadoUsuario);
 		
 		
 		//TEXT FIELDS los listener son para validar que se puede escribir y que no
@@ -89,9 +107,11 @@ public class VentanaGestionSedes extends JFrame {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				textf.numKeyPress(e);
+				labelIdSede.setText("ID Sede:");
+				labelIdSede.setForeground(Color.BLACK);
 			}
 		});
-		textFieldIdSede.setBounds(141, 94, 220, 20);
+		textFieldIdSede.setBounds(196, 100, 220, 20);
 		contentPane.add(textFieldIdSede);
 		textFieldIdSede.setColumns(10);
 		
@@ -103,14 +123,23 @@ public class VentanaGestionSedes extends JFrame {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				textf.textKeyPress(e);
+				labelNombreSede.setText("Nombre:");
+				labelNombreSede.setForeground(Color.BLACK);
 			}
 		});
-		textFieldNombreSede.setBounds(142, 128, 219, 20);
+		textFieldNombreSede.setBounds(197, 134, 219, 20);
 		contentPane.add(textFieldNombreSede);
 		textFieldNombreSede.setColumns(10);
 		
 		textFieldDireccionSede = new JTextField();
-		textFieldDireccionSede.setBounds(142, 162, 219, 20);
+		textFieldDireccionSede.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				labelDireccionSede.setText("Dirección:");
+				labelDireccionSede.setForeground(Color.BLACK);
+			}
+		});
+		textFieldDireccionSede.setBounds(197, 168, 219, 20);
 		contentPane.add(textFieldDireccionSede);
 		textFieldDireccionSede.setColumns(10);
 		
@@ -122,26 +151,52 @@ public class VentanaGestionSedes extends JFrame {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				textf.numKeyPress(e);
+				labelTelefonoSede.setText("Telefono:");
+				labelTelefonoSede.setForeground(Color.BLACK);
 			}
 		});
-		textFieldTelefonoSede.setBounds(142, 196, 219, 20);
+		textFieldTelefonoSede.setBounds(197, 202, 219, 20);
 		contentPane.add(textFieldTelefonoSede);
 		textFieldTelefonoSede.setColumns(10);
 		
+		
+		//BOTON DE GUARDADO
 		btnGuardarSede = new JButton("Guardar");
 		btnGuardarSede.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textFieldIdSede.getText().equals("")) {
+					verificar.guardar(textFieldIdSede,labelIdSede);
+				}else {
+					if(textFieldNombreSede.getText().equals("")) {
+						verificar.guardar(textFieldNombreSede,labelNombreSede);
+					}else {
+						if(textFieldDireccionSede.getText().equals("")) {
+							verificar.guardar(textFieldDireccionSede,labelDireccionSede);
+						}else {
+							if(textFieldTelefonoSede.getText().equals("")) {
+								verificar.guardar(textFieldTelefonoSede,labelTelefonoSede);
+							}else {
+								if(comboBoxEstadoUsuario.getSelectedIndex()==0) {
+									labelEstadoSede.setText("Seleccione un Estado");
+									labelEstadoSede.setForeground(Color.RED);
+									comboBoxEstadoUsuario.requestFocus();
+								}
+							}
+						}
+					}
+				}
 			}
 		});
-		btnGuardarSede.setBounds(41, 304, 90, 23);
+		btnGuardarSede.setBounds(79, 302, 90, 23);
 		contentPane.add(btnGuardarSede);
+
 		
 		btnModificarSede = new JButton("Modificar");
-		btnModificarSede.setBounds(157, 304, 90, 23);
+		btnModificarSede.setBounds(195, 302, 90, 23);
 		contentPane.add(btnModificarSede);
 		
 		btnEliminarSede = new JButton("Eliminar");
-		btnEliminarSede.setBounds(271, 304, 90, 23);
+		btnEliminarSede.setBounds(309, 302, 90, 23);
 		contentPane.add(btnEliminarSede);
 		
 		btnLimpiarSede = new JButton("Limpiar");
@@ -149,7 +204,7 @@ public class VentanaGestionSedes extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnLimpiarSede.setBounds(385, 304, 90, 23);
+		btnLimpiarSede.setBounds(423, 302, 90, 23);
 		contentPane.add(btnLimpiarSede);
 		
 		btnBuscarSede = new JButton("Buscar");
@@ -157,7 +212,7 @@ public class VentanaGestionSedes extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnBuscarSede.setBounds(386, 96, 89, 23);
+		btnBuscarSede.setBounds(477, 96, 89, 23);
 		contentPane.add(btnBuscarSede);
 		
 		btnVolverAtras = new JButton("Volver Atr\u00E1s");
@@ -169,12 +224,7 @@ public class VentanaGestionSedes extends JFrame {
 				ventana.setLocationRelativeTo(null);
 			}
 		});
-		btnVolverAtras.setBounds(205, 362, 115, 23);
+		btnVolverAtras.setBounds(243, 360, 115, 23);
 		contentPane.add(btnVolverAtras);
-		
-		JComboBox comboBoxEstadoUsuario = new JComboBox(new Object[]{});
-		comboBoxEstadoUsuario.setModel(new DefaultComboBoxModel(new String[] {"", "Activo ", "Inactivo"}));
-		comboBoxEstadoUsuario.setBounds(140, 233, 221, 22);
-		contentPane.add(comboBoxEstadoUsuario);
 	}
 }

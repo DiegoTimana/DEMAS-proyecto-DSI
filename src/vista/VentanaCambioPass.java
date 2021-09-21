@@ -1,11 +1,15 @@
 package vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controlador.VerificarBtnGuardar;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -13,14 +17,17 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class VentanaCambioPass extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textFieldUsuario;
-	private JTextField textFieldVariable;
+	private JTextField textFieldPssActual;
 	private JTextField textFieldPssNueva;
 	private JTextField textFieldConfirmarPss;
+	VerificarBtnGuardar verificar = new VerificarBtnGuardar();
 
 	/**
 	 * Create the frame.
@@ -67,22 +74,58 @@ public class VentanaCambioPass extends JFrame {
 		textFieldUsuario.setEditable(false);
 		contentPane.add(textFieldUsuario);
 		
-		textFieldVariable = new JTextField();
-		textFieldVariable.setColumns(10);
-		textFieldVariable.setBounds(179, 135, 200, 20);
-		contentPane.add(textFieldVariable);
+		textFieldPssActual = new JTextField();
+		textFieldPssActual.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				lblPssActual.setText("Contraseña Actual:");
+				lblPssActual.setForeground(Color.BLACK);			
+			}
+		});
+		textFieldPssActual.setColumns(10);
+		textFieldPssActual.setBounds(179, 135, 200, 20);
+		contentPane.add(textFieldPssActual);
 		
 		textFieldPssNueva = new JTextField();
+		textFieldPssNueva.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				lblPssNueva.setText("Contraseña Nueva:");
+				lblPssNueva.setForeground(Color.BLACK);
+			}
+		});
 		textFieldPssNueva.setColumns(10);
 		textFieldPssNueva.setBounds(179, 210, 200, 20);
 		contentPane.add(textFieldPssNueva);
 		
 		textFieldConfirmarPss = new JTextField();
+		textFieldConfirmarPss.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				lblConfirmarPss.setText("Confirmar Contraseña:");
+				lblConfirmarPss.setForeground(Color.BLACK);
+			}
+		});
 		textFieldConfirmarPss.setColumns(10);
 		textFieldConfirmarPss.setBounds(179, 285, 200, 20);
 		contentPane.add(textFieldConfirmarPss);
 		
+		//BOTON CONFIRMAR 
 		JButton btnConfirmar = new JButton("Confirmar");
+		btnConfirmar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(textFieldPssActual.getText().equals("")) {
+					verificar.guardar(textFieldPssActual,lblPssActual);
+				}else {
+					if(textFieldPssNueva.getText().equals("")) {
+						verificar.guardar(textFieldPssNueva,lblPssNueva);
+				}else {
+					if(textFieldConfirmarPss.getText().equals("")) {
+						verificar.guardar(textFieldConfirmarPss,lblConfirmarPss);
+				}
+			}
+		}
+				}});
 		btnConfirmar.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnConfirmar.setBounds(67, 375, 120, 30);
 		contentPane.add(btnConfirmar);
