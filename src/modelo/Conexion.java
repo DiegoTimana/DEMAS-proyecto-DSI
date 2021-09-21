@@ -2,18 +2,14 @@ package modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 public class Conexion {
 	
- 	private final String base = "demas";
-    private final String user = "root";
-    private final String password = "Lulas2312@";
-    private final String url = "jdbc:mysql://localhost:3306/" + base;
-    
+ 	private final String host = "ec2-54-174-172-218.compute-1.amazonaws.com";
+ 	private final String database = "daibcuigqa5mst";
+ 	private final String user = "fktbabssyoupex";
+ 	private final String password = "493319794c4e48b29c85747bf70fb00e5b69c075509342e52e5c647d7bd40f14";
+   
     
     private Connection con = null;
     
@@ -23,18 +19,21 @@ public class Conexion {
         
         try{
             //controlador para realizar la conexion
-            Class.forName("com.mysql.jdbc.Driver");
-            con = (Connection) DriverManager.getConnection(this.url, this.user, this.password);
+            //Class.forName("com.postgres.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:postgresql://"+host+":5432/"+database, user, password);
+            
+            if(con != null) {
             System.out.println("Conección a base de datos OK");
+            }
             
-        } catch(SQLException e){
-            System.err.println(e);
             
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception e) {
+        	System.out.println("Error al conectar a la base de datos");
+        	e.printStackTrace();
+        }finally {
+        	return con;
         }
-        
-        return con;   
+            
+         
     }
-
 }
