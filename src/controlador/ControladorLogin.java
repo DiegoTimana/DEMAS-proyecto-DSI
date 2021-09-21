@@ -74,6 +74,7 @@ public class ControladorLogin implements ActionListener{
 					
 					VentanaGerente ventanaGerente = new VentanaGerente();
 					ventanaGerente.setVisible(true);
+					ventanaGerente.setLocationRelativeTo(null);
 				}
 				
 			}else {
