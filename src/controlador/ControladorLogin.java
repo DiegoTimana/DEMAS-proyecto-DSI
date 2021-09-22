@@ -9,6 +9,7 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 import modelo.Conexion;
+import modelo.Usuario;
 import vista.VentanaGerente;
 import vista.VentanaLogin;
 
@@ -17,6 +18,9 @@ public class ControladorLogin implements ActionListener{
 	VentanaLogin ventanaLogin;
 	Conexion conexion;
 	Connection con;
+	public Usuario user = new Usuario();
+	public String password;
+	public String usuario;
 	
 	
 	 public ControladorLogin (VentanaLogin ventanaLogin){
@@ -42,7 +46,7 @@ public class ControladorLogin implements ActionListener{
 		if(e.getSource() == ventanaLogin.btnIngresar) {
 			
 			validarUsuario();
-			
+
 		}
 		
 	}
@@ -54,9 +58,10 @@ public class ControladorLogin implements ActionListener{
 		con = conexion.getConnection();
 		
 		int resultado=0;
-		String password = String.valueOf(ventanaLogin.passwordField.getPassword()); 
-		String usuario = ventanaLogin.textFieldUsuario.getText();
+		password = String.valueOf(ventanaLogin.passwordField.getPassword()); 
+		usuario = ventanaLogin.textFieldUsuario.getText();
 		String sql = "select * from usuarios where id_usuario='"+usuario+"'and contraseña='"+password+"' ";
+		
 		
 		try {
 			
@@ -71,7 +76,7 @@ public class ControladorLogin implements ActionListener{
 					
 					JOptionPane.showMessageDialog(null, "Login exitoso");
 					ventanaLogin.dispose();
-					
+					conexion.cierraConexion();
 					VentanaGerente ventanaGerente = new VentanaGerente();
 					ventanaGerente.setVisible(true);
 					ventanaGerente.setLocationRelativeTo(null);

@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import modelo.Conexion;
+import modelo.Usuario;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -17,8 +21,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-public class VentanaPerfil extends JFrame {
+public class VentanaPerfil extends JFrame{
 
 	private JPanel contentPane;
 	private JTextField textFieldNombre;
@@ -126,5 +133,38 @@ public class VentanaPerfil extends JFrame {
 		});
 		btnVolverAtrs.setBounds(368, 234, 113, 23);
 		contentPane.add(btnVolverAtrs);
+		
+		
+		mostrarDatosUsuario();
+//		System.out.println(user.getNombre());
+	}
+	
+	//método que sirve para mostrar los datos del usuario loggeado en la ventana de perfil :D
+	private void mostrarDatosUsuario() {
+		try {
+			Conexion conexion = new Conexion();
+			Connection con = conexion.getConnection();
+			String sql = "select * from usuarios limit 1";
+//			passwordField.setText(user.getPassword()); como conseguimos esa info D:
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			String datos[] = new String[5];
+			
+			while(rs.next()) {
+				datos[0] = rs.getString("nombre_usuario");
+				datos[1] = rs.getString("id_usuario");
+				datos[2] = rs.getString("cargo_usuario");
+				datos[3] = rs.getString("sede");
+				datos[4] = rs.getString("contraseña");
+			}
+			textFieldNombre.setText(datos[0]);
+			textFieldCedula.setText(datos[1]);
+			textFieldCargo.setText(datos[2]);
+			textFieldSede.setText(datos[3]);
+			passwordField.setText(datos[4]);
+			
+			conexion.cierraConexion();
+		
+		} catch(Exception e) {}
 	}
 }

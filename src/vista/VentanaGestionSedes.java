@@ -39,6 +39,7 @@ public class VentanaGestionSedes extends JFrame {
 	public JButton btnLimpiarSede; 
 	public JButton btnBuscarSede; 
 	private JButton btnVolverAtras;
+	public JComboBox comboBoxEstadoUsuario;
 	ValidacionTextFields textf = new ValidacionTextFields();
 	VerificarBtnGuardar verificar = new VerificarBtnGuardar();
 	
@@ -88,7 +89,7 @@ public class VentanaGestionSedes extends JFrame {
 		contentPane.add(labelEstadoSede);
 		
 		
-		JComboBox comboBoxEstadoUsuario = new JComboBox(new Object[]{});
+		comboBoxEstadoUsuario = new JComboBox(new Object[]{});
 		comboBoxEstadoUsuario.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

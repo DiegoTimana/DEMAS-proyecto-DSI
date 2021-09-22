@@ -15,9 +15,8 @@ public class ConsultaUsuario extends Conexion{
         
         try{
            //para enviar los datos 
-           ps = con.prepareStatement(sql);
-           
-           ps.setString(1, usuario.getId());
+           ps = con.prepareStatement(sql);           
+           ps.setInt(1, usuario.getId());
            ps.setString(2, usuario.getNombre());
            ps.setString(3, usuario.getApellidos());
            ps.setString(4, usuario.getFechaNacimiento());
@@ -28,7 +27,7 @@ public class ConsultaUsuario extends Conexion{
            ps.setString(9, usuario.getFechaVinculacion());
            ps.setString(10, usuario.getCargo());
            ps.setString(11, usuario.getEstado());
-           ps.setString(12, usuario.getId_sede());
+           ps.setInt(12, usuario.getId_sede());
            ps.setString(13, usuario.getPassword());
            
            

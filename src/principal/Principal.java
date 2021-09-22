@@ -16,6 +16,10 @@ public class Principal {
 		ctrl.iniciar();
 		ventanaInicio.setVisible(true);
 		
+		//asignamos el password y usuario que ingreso
+		ctrl.user.setNombre(ctrl.usuario);
+		ctrl.user.setPassword(ctrl.password);	
+		
 		
 	}
 

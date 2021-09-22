@@ -2,7 +2,7 @@ package modelo;
 
 public class Usuario {
 	
-	private String id;
+	private int id;
     private String nombre;
     private String apellidos;
     private String fechaNacimiento;
@@ -18,30 +18,30 @@ public class Usuario {
     
     public Usuario() {
     }
-    
-    public Usuario(String id,String nombre,String apellidos,String fechaNacimiento,String telefono,String direccion,String email,
-    		String genero,String fechaVinculacion,String cargo,String estado,int id_sede,String password) {
-    	this.id = id;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.fechaNacimiento=fechaNacimiento;
-        this.telefono= telefono;
-        this.direccion = direccion;
-        this.email= email;
-        this.genero= genero;
-        this.fechaVinculacion= fechaVinculacion;
-        this.cargo= cargo;
-        this.estado= estado;
-        this.id_sede= id_sede;
-        this.password = password;
-        
-    }
+//    
+//    public Usuario(int id,String nombre,String apellidos,String fechaNacimiento,String telefono,String direccion,String email,
+//    		String genero,String fechaVinculacion,String cargo,String estado,int id_sede,String password) {
+//    	this.id = id;
+//        this.nombre = nombre;
+//        this.apellidos = apellidos;
+//        this.fechaNacimiento=fechaNacimiento;
+//        this.telefono= telefono;
+//        this.direccion = direccion;
+//        this.email= email;
+//        this.genero= genero;
+//        this.fechaVinculacion= fechaVinculacion;
+//        this.cargo= cargo;
+//        this.estado= estado;
+//        this.id_sede= id_sede;
+//        this.password = password;
+//        
+//    }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

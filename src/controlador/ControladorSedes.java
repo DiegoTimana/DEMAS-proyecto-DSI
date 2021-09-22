@@ -3,7 +3,9 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.AbstractButton;
 import javax.swing.JOptionPane;
+import javax.swing.text.JTextComponent;
 
 import modelo.ConsultasSede;
 import modelo.Sede;
@@ -11,7 +13,7 @@ import vista.VentanaGestionSedes;
 
 public class ControladorSedes implements ActionListener {
 	
-	 private Sede sede;
+	    private Sede sede;
 	    private ConsultasSede consultaSede;
 	    private VentanaGestionSedes ventana;
 	    
@@ -43,11 +45,11 @@ public class ControladorSedes implements ActionListener {
 			
 			if(e.getSource() == ventana.btnGuardarSede){
 	            //vamos a tomar los valores de las cajas de texto y meterlos al modelo
-	        	sede.setIdSede(ventana.textFieldIdSede.getText());
+	        	sede.setIdSede(Integer.parseInt(ventana.textFieldIdSede.getText()));
 	        	sede.setNombreSede(ventana.textFieldNombreSede.getText());
 	        	sede.setDireccionSede(ventana.textFieldDireccionSede.getText());
 	        	sede.setTelefonoSede(ventana.textFieldTelefonoSede.getText());
-	        	sede.setEstadoSede(ventana.textFieldEstadoSede.getText());
+	        	sede.setEstadoSede(ventana.comboBoxEstadoUsuario.getSelectedItem().toString());
 	            
 	            //el metodo registrar retorna un booleano
 	            if(consultaSede.registrar(sede)){
@@ -63,11 +65,11 @@ public class ControladorSedes implements ActionListener {
 	        
 	        if(e.getSource() == ventana.btnModificarSede){
 	            //vamos a tomar los valores de las cajas de texto y meterlos al modelo
-	        	sede.setIdSede(ventana.textFieldIdSede.getText()); //mirar si es necesario ponerse
+	        	sede.setIdSede(Integer.parseInt(ventana.textFieldIdSede.getText())); //mirar si es necesario ponerse
 	        	sede.setNombreSede(ventana.textFieldNombreSede.getText());
 	        	sede.setDireccionSede(ventana.textFieldDireccionSede.getText());
 	        	sede.setTelefonoSede(ventana.textFieldTelefonoSede.getText());
-	        	sede.setEstadoSede(ventana.textFieldEstadoSede.getText());
+	        	sede.setEstadoSede(ventana.comboBoxEstadoUsuario.getSelectedItem().toString());
 	            
 	            //el metodo registrar retorna un booleano
 	            if(consultaSede.modificar(sede)){
@@ -83,7 +85,7 @@ public class ControladorSedes implements ActionListener {
 	        
 	        if(e.getSource() == ventana.btnEliminarSede){
 	            //vamos a tomar los valores de las cajas de texto y meterlos al modelo
-	        	sede.setIdSede(ventana.textFieldIdSede.getText());
+	        	sede.setIdSede(Integer.parseInt(ventana.textFieldIdSede.getText()));
 	            
 	            //el metodo registrar retorna un booleano
 	            if(consultaSede.eliminar(sede)){
@@ -98,7 +100,7 @@ public class ControladorSedes implements ActionListener {
 	        
 	        if(e.getSource() == ventana.btnBuscarSede){
 	            //vamos a tomar los valores de las cajas de texto y meterlos al modelo
-	        	sede.setIdSede(ventana.textFieldIdSede.getText());
+	        	sede.setIdSede(Integer.parseInt(ventana.textFieldIdSede.getText()));
 	            
 	            //el metodo registrar retorna un booleano
 	            if(consultaSede.buscar(sede)){
@@ -106,7 +108,7 @@ public class ControladorSedes implements ActionListener {
 	                ventana.textFieldNombreSede.setText(sede.getNombreSede());
 	                ventana.textFieldDireccionSede.setText(sede.getDireccionSede());
 	                ventana.textFieldTelefonoSede.setText(sede.getTelefonoSede());
-	                ventana.textFieldEstadoSede.setText(sede.getEstadoSede());
+	                ventana.comboBoxEstadoUsuario.setSelectedItem(sede.getEstadoSede());
 	               
 	            } else{
 	                JOptionPane.showMessageDialog(null, "No se encontro registro");
@@ -128,7 +130,7 @@ public class ControladorSedes implements ActionListener {
 	        ventana.textFieldNombreSede.setText(null);
 	        ventana.textFieldDireccionSede.setText(null);
 	        ventana.textFieldTelefonoSede.setText(null);    
-	        ventana.textFieldEstadoSede.setText(null);
+	        ventana.comboBoxEstadoUsuario.setSelectedIndex(0);
 	    }
 	
 

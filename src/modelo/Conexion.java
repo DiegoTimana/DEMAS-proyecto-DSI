@@ -2,6 +2,9 @@ package modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
 
 public class Conexion {
 	
@@ -11,7 +14,7 @@ public class Conexion {
  	private final String password = "493319794c4e48b29c85747bf70fb00e5b69c075509342e52e5c647d7bd40f14";
    
     
-    private Connection con = null;
+    private Connection con;
     
     
     // obtiene la conexion la guarda y luego la retorna
@@ -32,8 +35,14 @@ public class Conexion {
         	e.printStackTrace();
         }finally {
         	return con;
+        }     
+    }
+    
+    public void cierraConexion() {
+        try {
+            con.close();
+        } catch (SQLException sqle) {
+            JOptionPane.showMessageDialog(null, "Error al cerrar conexion", "Error", JOptionPane.ERROR_MESSAGE);
         }
-            
-         
     }
 }

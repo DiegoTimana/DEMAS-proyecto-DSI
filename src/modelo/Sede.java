@@ -10,14 +10,14 @@ public class Sede {
     
     public Sede() {
     }
-    
-    public Sede(int idSede, String nombreSede, String direccionSede, String telefonoSede, String estadoSede) {
-    	this.idSede = idSede;
-        this.nombreSede = nombreSede;
-        this.direccionSede = direccionSede;
-        this.telefonoSede = telefonoSede;
-        this.estadoSede = estadoSede;
-    }
+//    
+//    public Sede(int idSede, String nombreSede, String direccionSede, String telefonoSede, String estadoSede) {
+//    	this.idSede = idSede;
+//        this.nombreSede = nombreSede;
+//        this.direccionSede = direccionSede;
+//        this.telefonoSede = telefonoSede;
+//        this.estadoSede = estadoSede;
+//    }
     
     public int getIdSede() {
         return idSede;
