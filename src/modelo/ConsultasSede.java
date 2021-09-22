@@ -18,7 +18,7 @@ public class ConsultasSede extends Conexion {
         try{
            //para enviar los datos 
            ps = con.prepareStatement(sql);
-           ps.setString(1,sede.getIdSede());
+           ps.setInt(1,sede.getIdSede());
            ps.setString(2, sede.getNombreSede());
            ps.setString(3, sede.getDireccionSede());
            ps.setString(4, sede.getTelefonoSede());
@@ -56,7 +56,7 @@ public class ConsultasSede extends Conexion {
            ps.setString(3, sede.getTelefonoSede());
            ps.setString(4, sede.getEstadoSede());
            
-           ps.setString(5, sede.getIdSede());
+           ps.setInt(5, sede.getIdSede());
            
            ps.execute();
            return true;
@@ -85,7 +85,7 @@ public class ConsultasSede extends Conexion {
         try{
            //para enviar los datos 
            ps = con.prepareStatement(sql);
-           ps.setString(1,sede.getIdSede());
+           ps.setInt(1,sede.getIdSede());
            ps.execute();
            return true;
            
@@ -114,7 +114,7 @@ public class ConsultasSede extends Conexion {
         try{
            //para enviar los datos 
            ps = con.prepareStatement(sql);
-           ps.setString(1,sede.getIdSede());
+           ps.setInt(1,sede.getIdSede());
            rs = ps.executeQuery();
            
            

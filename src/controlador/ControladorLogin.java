@@ -56,7 +56,7 @@ public class ControladorLogin implements ActionListener{
 		int resultado=0;
 		String password = String.valueOf(ventanaLogin.passwordField.getPassword()); 
 		String usuario = ventanaLogin.textFieldUsuario.getText();
-		String sql = "select * from usuarios where cedula='"+usuario+"'and contraseña='"+password+"' ";
+		String sql = "select * from usuarios where id_usuario='"+usuario+"'and contraseña='"+password+"' ";
 		
 		try {
 			

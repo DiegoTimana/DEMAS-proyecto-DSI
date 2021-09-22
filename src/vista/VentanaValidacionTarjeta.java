@@ -18,6 +18,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -56,14 +57,6 @@ public class VentanaValidacionTarjeta extends JFrame {
 		lblTipotarjeta.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblTipotarjeta.setBounds(10, 47, 125, 25);
 		contentPane.add(lblTipotarjeta);
-		
-		JRadioButton rdbtnDebito = new JRadioButton("Debito");
-		rdbtnDebito.setBounds(86, 122, 64, 23);
-		contentPane.add(rdbtnDebito);
-		
-		JRadioButton rdbtnCredito = new JRadioButton("Credito");
-		rdbtnCredito.setBounds(10, 122, 70, 23);
-		contentPane.add(rdbtnCredito);
 		
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setBounds(10, 192, 113, 20);
@@ -145,6 +138,19 @@ public class VentanaValidacionTarjeta extends JFrame {
 		JComboBox comboBoxMes = new JComboBox();
 		comboBoxMes.setBounds(255, 261, 70, 20);
 		contentPane.add(comboBoxMes);
+		
+		//RADIOBUTTONS
+		JRadioButton rdbtnDebito = new JRadioButton("Debito");
+		rdbtnDebito.setBounds(86, 122, 64, 23);
+		contentPane.add(rdbtnDebito);
+		
+		JRadioButton rdbtnCredito = new JRadioButton("Credito");
+		rdbtnCredito.setBounds(10, 122, 70, 23);
+		contentPane.add(rdbtnCredito);
+		
+		ButtonGroup grupo1 = new ButtonGroup();
+		grupo1.add(rdbtnDebito);
+		grupo1.add(rdbtnCredito);
 		
 		//BOTON DE GUARDAR falta verificar los radio buttons y los combobox
 		JButton btnAceptar = new JButton("Aceptar");

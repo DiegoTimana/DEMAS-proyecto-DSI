@@ -13,8 +13,29 @@ public class Usuario {
     private String fechaVinculacion;     
     private String cargo;
     private String estado;    
-    private String id_sede;    
+    private int id_sede;    
     private String password;
+    
+    public Usuario() {
+    }
+    
+    public Usuario(String id,String nombre,String apellidos,String fechaNacimiento,String telefono,String direccion,String email,
+    		String genero,String fechaVinculacion,String cargo,String estado,int id_sede,String password) {
+    	this.id = id;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento=fechaNacimiento;
+        this.telefono= telefono;
+        this.direccion = direccion;
+        this.email= email;
+        this.genero= genero;
+        this.fechaVinculacion= fechaVinculacion;
+        this.cargo= cargo;
+        this.estado= estado;
+        this.id_sede= id_sede;
+        this.password = password;
+        
+    }
 
     public String getId() {
         return id;
@@ -104,11 +125,11 @@ public class Usuario {
         this.estado = estado;
     }
 
-    public String getId_sede() {
+    public int getId_sede() {
         return id_sede;
     }
 
-    public void setId_sede(String id_sede) {
+    public void setId_sede(int id_sede) {
         this.id_sede = id_sede;
     }
 

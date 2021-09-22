@@ -20,6 +20,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -289,7 +291,8 @@ public class VentanaPos extends JFrame {
 		contentPane.add(textFieldTotalVenta);
 		textFieldTotalVenta.setColumns(10);
 		
-	
+		//RADIO BUTTONS
+		
 		JRadioButton rdbtnEfectivo = new JRadioButton("Efectivo");
 		rdbtnEfectivo.setBounds(617, 349, 80, 23);
 		contentPane.add(rdbtnEfectivo);
@@ -297,6 +300,10 @@ public class VentanaPos extends JFrame {
 		JRadioButton rdbtnTarjeta = new JRadioButton("Tarjeta");
 		rdbtnTarjeta.setBounds(618, 380, 70, 23);
 		contentPane.add(rdbtnTarjeta);
+		
+		ButtonGroup grupo1 = new ButtonGroup();
+		grupo1.add(rdbtnTarjeta);
+		grupo1.add(rdbtnEfectivo);
 		
 		JButton btnValidarPago = new JButton("Validar Pago");
 		btnValidarPago.addActionListener(new ActionListener() {
